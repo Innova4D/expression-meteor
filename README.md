@@ -1,2 +1,2 @@
 # expression-webapp
-Sentiment Analysis WebApp with Polymer and Websockets.
+Sentiment Analysis Reactive WebApp with Meteor and Neo4j.
