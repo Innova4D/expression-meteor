@@ -25,22 +25,20 @@
 }
 
 .sentiment-card .card-title {
-  padding: 8px;
-  position: absolute;
+  padding: 5px;
   opacity: 1;
   width:  100%;
   font-size: 27px;
-  font-weight: 300;
+  font-weight: 100;
   color: white;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  bottom: 0px;
 }
 
-.sentiment-card #action-bar {
+.sentiment-card .action-bar {
   display: flex;
   align-items: center;
   margin: 0 auto;
@@ -54,7 +52,7 @@
   /*z-index: -1;*/
 }
 
-.sentiment-card #action-bar .glyphicon {
+.sentiment-card .action-bar .glyphicon {
   color: white;
   font-size: 24px;
   opacity: 1;
@@ -133,11 +131,12 @@
   z-index: 2;
   /* for firefox 31 */
   transform: rotateY(0deg);
+
   /** Flex positioning **/
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
 }
 

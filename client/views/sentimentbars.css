@@ -1,23 +1,42 @@
-.sentimentbar {
-  width: 23px;
-  height: 100px;
-  margin-bottom: 40px;
-  margin-left: 8px;
-  cursor: pointer;
-  text-align: center;
+
+.barscontainer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.sentimentbar {
+  width: 28px;
+  min-height: 10px;
+  max-height: 100px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
   -webkit-transition: height 1s;
   -moz-transition: height 1s;
   transition: height 1s;
   border-radius: 2px 2px 0px 0px;
+  /*
+  margin-left: 12px;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  */
 }
 .sentimentbar .emoticon {
-  font-family: HelveticaNeue-Medium, Arial;
+  font-weight: 100;
+  font-family: Helvetica, Arial;
   font-size: 12px;
   color: rgba(255, 255, 255, 0.75);
+}
+
+.sentimentbar .bar-value {
+  font-size:   10px;
+  font-weight: 400;
+  font-family: Helvetica, Arial;
+  color: rgba(0, 0, 0, 0.35);
 }
 
 /**** Sentiments ****/
