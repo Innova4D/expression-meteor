@@ -1,0 +1,40 @@
+<template name="sentimentcard">
+  <div class="hidden sentiment-card-id">{{_id}}</div>
+  <div class="sentiment-card content col-xs-6 flip-container" ontouchstart="this.classList.toggle('hover');" id="123456">
+    <div class="flipper">
+      <div class="sentiment-card-front">
+        <!-- front content -->
+        {{>sentimentmap}}
+        {{>sentimentribbon}}
+        <div class="card-title card-title-front">{{name}}
+          <div class="glyphicon glyphicon-transfer"></div>
+        </div>
+      </div>
+      <div class="sentiment-card-back">
+        <!-- back content -->
+        {{>sentimentbars}}
+        {{>sentimentribbon}}
+        <div class="card-title card-title-back">{{name}}
+          <div class="glyphicon glyphicon-transfer"></div>
+        </div>
+      </div>
+    </div>
+    <div id="action-bar" class="text-center stopselect">
+      <div id="pin-card" class="action-element col-xs-6">
+        <div class="glyphicon glyphicon-star-empty"></div>
+        <div class="action-counter">0</div>
+        <paper-ripple class="recenteringTouch" fit></paper-ripple>
+      </div>
+      <div id="share-card" class="action-element col-xs-6">
+        <div class="glyphicon glyphicon-share-alt"></div>
+        <div class="action-counter">0</div>
+        <paper-ripple class="recenteringTouch" fit></paper-ripple>
+      </div>
+      <div class="action-element col-xs-6 comment-card">
+        <div class="glyphicon glyphicon-comment"></div>
+        <div class="action-counter">{{commentcounter this._id}}</div>
+        <paper-ripple class="recenteringTouch" fit></paper-ripple>
+      </div>
+    </div>
+  </div>
+</template>

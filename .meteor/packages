@@ -7,3 +7,8 @@
 meteor-platform
 autopublish
 insecure
+
+# Atmosphere packages:
+
+ecwyne:polymer-elements
+twbs:bootstrap

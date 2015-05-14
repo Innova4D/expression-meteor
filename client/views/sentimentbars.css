@@ -1,0 +1,43 @@
+.sentimentbar {
+  width: 23px;
+  height: 100px;
+  margin-bottom: 40px;
+  margin-left: 8px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  -webkit-transition: height 1s;
+  -moz-transition: height 1s;
+  transition: height 1s;
+  border-radius: 2px 2px 0px 0px;
+  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
+}
+.sentimentbar .emoticon {
+  font-family: HelveticaNeue-Medium, Arial;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/**** Sentiments ****/
+
+.verynegative {
+  background: #FF0035;
+}
+
+.negative {
+  background: #FF8A00;
+}
+
+.neutral {
+  background: #FBBF00;
+}
+
+.positive {
+  background: #86C300;
+}
+
+.verypositive {
+  background: #00C273;
+}

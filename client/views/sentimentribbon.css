@@ -1,0 +1,19 @@
+.ribbon {
+  width: 100%;
+  background: #2fad63;
+  color: white;
+  height: 50px;
+  box-shadow: inset 0px 0px 2px 0px rgba(30,30,30,.2);
+}
+.ribbontext {
+  width: 100%;
+  font-weight: 300;
+  font-size: 12px;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  opacity: 0.75;
+  padding: 5px;
+}

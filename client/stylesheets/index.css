@@ -1,0 +1,92 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+* {
+  margin: 0;
+}
+
+#text {
+  top: 5px;
+}
+
+#title {
+  font-weight: 100;
+  /*font-family: 'Roboto','Helvetica', sans-serif;*/
+  font-family: 'Kaushan Script', cursive;
+  font-size: 32px;
+  text-overflow: ellipsis;
+}
+#subtitle {
+  padding: 3px;
+  float: right;
+  font-size: 9px;
+  /*font-size: 2vw;*/
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: 'Roboto','Helvetica', sans-serif;
+}
+
+/*** Other stuff ***/
+
+#core_header_panel {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+}
+
+.medium-tall {
+  height: 80px;
+  border-bottom: 5px solid #0E71B3;
+}
+
+#core_toolbar {
+  background: #107FC9;
+  color: white;
+}
+
+#core_card {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.098), 0px 0px 3px rgba(0, 0, 0, 0.098);
+  left: 330px;
+  top: 186px;
+}
+
+section{
+  /*background: #ececec;*/
+  background: #f4f4f4;
+}
+
+.session-buttons {
+  position: absolute;
+  float: right;
+  right: 0;
+  top: 15px;
+  font-size: 14px;
+  font-family: roboto, helvetica;
+  font-weight: 100;
+}
+
+.btn-access{
+  border: 1px solid #15639a;
+  background: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
+.btn-registry{
+  border: 1px solid #15639a;
+  background: #1872b1;
+  text-transform: capitalize;
+  border-radius: 5px;
+}
