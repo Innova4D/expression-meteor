@@ -93,7 +93,8 @@ Template.commentbox.events({
 
 
 /** Mongo Queries **/
-// db.topics.insert({name: "Sentiment Card",isActive: true,timestamp: new Date(),share: 0	});
+// db.topics.find()
+// db.topics.insert({name: "UDLAP",isActive: true,timestamp: new Date(),share: 0	});
 /* Positive */
 //db.comments.insert({topic: ObjectId("55540d606638db2164f2aca8"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:2, keywords: ["bonito", "hermoso"], text: "El cielo es bonito y muy hermoso"})
 /* Negative */
