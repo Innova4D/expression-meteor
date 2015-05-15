@@ -8,29 +8,6 @@ html, body {
   margin: 0;
 }
 
-#text {
-  top: 5px;
-}
-
-#title {
-  font-weight: 100;
-  /*font-family: 'Roboto','Helvetica', sans-serif;*/
-  font-family: 'Kaushan Script', cursive;
-  font-size: 32px;
-  text-overflow: ellipsis;
-}
-#subtitle {
-  padding: 3px;
-  float: right;
-  font-size: 9px;
-  /*font-size: 2vw;*/
-  font-weight: 300;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-family: 'Roboto','Helvetica', sans-serif;
-}
-
 /*** Other stuff ***/
 
 #core_header_panel {
@@ -47,35 +24,68 @@ html, body {
   border-bottom: 5px solid #0E71B3;
 }
 
-#core_toolbar {
-  background: #107FC9;
-  color: white;
-}
 
 #core_card {
-  position: absolute;
+  /*position: absolute;
   width: 300px;
   height: 300px;
   background-color: rgb(255, 255, 255);
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.098), 0px 0px 3px rgba(0, 0, 0, 0.098);
   left: 330px;
-  top: 186px;
+  top: 186px;*/
 }
 
-section{
+.sentiment-cards-section {
   /*background: #ececec;*/
   background: #f4f4f4;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.session-buttons {
-  position: absolute;
+.core-toolbar {
+  width: 100%;
+  background: #107FC9;
+  color: white;
+  display: flex;
+  align-content: space-around;
+  align-items: center;
+}
+
+.header-text {
+  font-weight: 100;
+  /*font-family: 'Roboto','Helvetica', sans-serif;*/
+  font-family: 'Kaushan Script', cursive;
+  font-size: 32px;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  flex-shrink: 0.1;
+}
+#subtitle {
+  padding: 3px;
   float: right;
-  right: 0;
-  top: 15px;
+  font-size: 9px;
+  /*font-size: 2vw;*/
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-family: 'Roboto','Helvetica', sans-serif;
+}
+
+.header-hamburguer {
+  /*align-self: flex-start;*/
+  flex-grow: 1;
+}
+
+.header-session-buttons {
   font-size: 14px;
   font-family: roboto, helvetica;
   font-weight: 100;
+  /*align-self: flex-end;*/
+  flex-grow: 2;
 }
 
 .btn-access{
@@ -89,4 +99,8 @@ section{
   background: #1872b1;
   text-transform: capitalize;
   border-radius: 5px;
+}
+
+.container-fluid {
+  padding:0;
 }

@@ -1,4 +1,8 @@
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <title>Expression v0.4</title>
   <link href='//fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -12,21 +16,21 @@
 </head>
 
 <body>
-   <core-header-panel mode="waterfall-tall" tallclass="medium-tall" id="core_header_panel">
-    <core-toolbar id="core_toolbar">
-      <core-icon-button icon="menu" id="core_icon_button"></core-icon-button>
-      <div id="text">
+  <core-header-panel mode="waterfall-tall" tallclass="medium-tall" id="core_header_panel">
+    <core-toolbar class="core-toolbar container-fluid">
+      <core-icon-button icon="menu" class="header-hamburguer"></core-icon-button>
+      <div class="header-text">
         <div id="title">Expression</div>
         <!-- <div id="subtitle">¿Cuál es el sentimiento?</div> -->
       </div>
-      <div class="session-buttons">
+      <div class="header-session-buttons">
         <paper-button class="btn-access"  >Login </paper-button>
         <paper-button class="btn-registry">Sign Up</paper-button>
       </div>
     </core-toolbar> -->
-    <section id="section" class="container-fluid topics">
+    <section id="section" class="container-fluid topics sentiment-cards-section">
       {{#each topics}}
-        {{> sentimentcard}}
+      {{> sentimentcard}}
       {{/each}}
     </section>
   </core-header-panel>
