@@ -1,9 +1,13 @@
 .sentiment-map {
-  background: url("http://www.anoleannals.org/wp-content/uploads/2013/08/map-chinantla-mexico-Google-Maps.jpg") no-repeat;
-  background-size: cover;
   border-radius: 50%;
-  width:130px;
-  height:130px;
-  margin-bottom: 8px;
+  width: 160px;
+  height:160px;
   box-shadow: inset 0px 0px 4px 0px rgba(30,30,30,.55);
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.map-canvas {
+  z-index: -1;
+  border-radius: 50%;
 }

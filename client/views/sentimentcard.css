@@ -136,8 +136,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-
+  justify-content: flex-end;
 }
 
 /* back, initially hidden pane */
@@ -147,7 +146,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .stopselect{

@@ -1,3 +1,5 @@
 <template name="sentimentmap">
-  <div class="sentiment-map"></div>
+  <div class="sentiment-map stopselect">
+    {{> googleMap name="sentimentMap" options=mapOptions}}
+  </div>
 </template>
