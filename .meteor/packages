@@ -5,7 +5,7 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
+# autopublish
 insecure
 
 # Atmosphere packages:
@@ -14,3 +14,4 @@ ecwyne:polymer-elements
 twbs:bootstrap
 natestrauser:animate-css
 dburles:google-maps
+meteorhacks:aggregate

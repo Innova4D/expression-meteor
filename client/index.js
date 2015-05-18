@@ -1,6 +1,9 @@
 Topics   = new Mongo.Collection("topics");
 Comments = new Mongo.Collection("comments");
 
+Meteor.subscribe("topics");
+Meteor.subscribe("comments");
+
 Meteor.startup(function() {
   GoogleMaps.load();
 });
@@ -68,15 +71,10 @@ Template.commentbox.helpers({
   }
 });
 
-// Template.singlecommentbox.rendered = function () {
-//   console.log("scrolltop is " + $('.comment-box-section').scrollTop());
-// }
-
 /*
 * Insert a Comment to MongoDB from CommentBox.
 * Keypressed and OnClick Events...
 */
-
 
 Template.commentbox.events({
   "click .comment-box-send": function (event, template) {
@@ -85,7 +83,7 @@ Template.commentbox.events({
       // author: null,
       posted: new Date(),
       loc: {lng: 98.91, lat: 110.23},
-      sentiment:2,
+      sentiment: 0,
       keywords: ["bonito", "hermoso"],
       text: template.$(".comment-box-input").val()
     });
@@ -104,7 +102,7 @@ Template.commentbox.events({
         // author: null,
         posted: new Date(),
         loc: {lng: 98.91, lat: 110.23},
-        sentiment:2,
+        sentiment: 0,
         keywords: ["bonito", "hermoso"],
         text: template.$(".comment-box-input").val()
       });
