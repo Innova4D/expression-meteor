@@ -7,7 +7,12 @@
         <div class="comment-box-top">
           <h1 class="comment-box-title">{{name}}</h1>
         </div>
-        <div class="card-sentiment-dot"></div>
+
+        <div class="past-comments">
+          <div class="commentbox-sentiment-dot"></div>
+          <!-- <div class="fa fa-clock-o comments-past-button"></div> -->
+        </div>
+
       </core-toolbar>
       <section class="container-fluid comment-box-section">
         {{#each comments}}

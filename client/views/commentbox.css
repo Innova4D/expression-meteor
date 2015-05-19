@@ -33,6 +33,20 @@ paper-fab {
   font-weight: 100;
 }
 
+.commentbox-sentiment-dot {
+  width: 10px;
+  height:10px;
+  background: #68ca75;
+  border-radius: 50%;
+  margin: 3px;
+  float: left;
+}
+
+.comments-past-button {
+  float: right;
+  padding-left: 50px;
+}
+
 .card-sentiment-dot {
   width: 10px;
   height:10px;

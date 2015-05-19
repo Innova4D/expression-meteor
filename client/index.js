@@ -71,6 +71,33 @@ Template.commentbox.helpers({
   }
 });
 
+Template.singlecommentbox.helpers({
+  sentiment: function () {
+    // return this.sentiment;
+  }
+});
+
+Template.singlecommentbox.rendered = function(){
+  switch (this.data.sentiment) {
+    case -2:
+    this.$(".user-sentiment").css('background-color', '#e5596b');
+    break;
+    case -1:
+    this.$(".user-sentiment").css('background-color', '#fd8a24');
+    break;
+    case 0:
+    this.$(".user-sentiment").css('background-color', '#fabe2c');
+    break;
+    case 1:
+    this.$(".user-sentiment").css('background-color', '#88c124');
+    break;
+    case 2:
+    this.$(".user-sentiment").css('background-color', '#1cb970');
+    break;
+  }
+};
+
+
 /*
 * Insert a Comment to MongoDB from CommentBox.
 * Keypressed and OnClick Events...
@@ -78,12 +105,14 @@ Template.commentbox.helpers({
 
 Template.commentbox.events({
   "click .comment-box-send": function (event, template) {
+    var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
+
     Comments.insert({
       topic: this.id,
       // author: null,
       posted: new Date(),
       loc: {lng: 98.91, lat: 110.23},
-      sentiment: 0,
+      sentiment: random,
       keywords: ["bonito", "hermoso"],
       text: template.$(".comment-box-input").val()
     });
@@ -96,13 +125,15 @@ Template.commentbox.events({
   },
 
   "keypress paper-input": function (event, template) {
+    var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
+
     if (event.charCode == 13) {
       Comments.insert({
         topic: this.id,
         // author: null,
         posted: new Date(),
         loc: {lng: 98.91, lat: 110.23},
-        sentiment: 0,
+        sentiment: random,
         keywords: ["bonito", "hermoso"],
         text: template.$(".comment-box-input").val()
       });
@@ -119,7 +150,7 @@ Template.commentbox.events({
 
 /** Mongo Queries **/
 // db.topics.find()
-// db.topics.insert({name: "UDLAP",isActive: true,timestamp: new Date(),share: 0	});
+// db.topics.insert({name: "UDLAP", sentiment: 2, isActive: true,timestamp: new Date(),share: 0	});
 /* Positive */
 //db.comments.insert({topic: ObjectId("55540d606638db2164f2aca8"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:2, keywords: ["bonito", "hermoso"], text: "El cielo es bonito y muy hermoso"})
 /* Negative */

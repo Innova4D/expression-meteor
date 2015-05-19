@@ -7,7 +7,7 @@
         <!-- front content -->
         {{>sentimentmap}}
         {{>sentimentribbon}}
-        <div class="card-title card-title-front">{{name}}
+        <div class="card-title card-title-front stopselect">{{name}}
           <div class="glyphicon glyphicon-transfer"></div>
         </div>
       </div>
@@ -15,24 +15,22 @@
         <!-- back content -->
         {{>sentimentbars}}
         {{>sentimentribbon}}
-        <div class="card-title card-title-back">{{name}}
+        <div class="card-title card-title-back stopselect">{{name}}
           <div class="glyphicon glyphicon-transfer"></div>
         </div>
       </div>
     </div>
     <div class="action-bar text-center stopselect">
-      <div id="pin-card" class="action-element col-xs-6">
-        <div class="glyphicon glyphicon-star-empty"></div>
-        <div class="action-counter">0</div>
+      <div id="past-events" class="action-element col-xs-6">
+        <div class="fa fa-clock-o"></div>
         <paper-ripple class="recenteringTouch" fit></paper-ripple>
       </div>
       <div id="share-card" class="action-element col-xs-6">
-        <div class="glyphicon glyphicon-share-alt"></div>
-        <div class="action-counter">0</div>
+        <div class="fa fa-share-alt"></div>
         <paper-ripple class="recenteringTouch" fit></paper-ripple>
       </div>
       <div class="action-element col-xs-6 comment-card">
-        <div class="glyphicon glyphicon-comment"></div>
+        <div class="fa fa-comments"></div>
         <div class="action-counter">{{commentcounter this._id}}</div>
         <paper-ripple class="recenteringTouch" fit></paper-ripple>
       </div>
