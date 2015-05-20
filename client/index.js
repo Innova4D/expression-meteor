@@ -12,9 +12,14 @@ Template.sentimentmap.helpers({
   mapOptions: function() {
     if (GoogleMaps.loaded()) {
       return {
-        center: new google.maps.LatLng(19.4333, -99.1333),
-        zoom: 4,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
+        center: new google.maps.LatLng(23.6260333, -102.5377501),
+        zoom: 3,
+        disableDefaultUI: true,
+        scrollwheel: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        draggable: false
       };
     }
   }
@@ -73,6 +78,12 @@ Template.commentbox.helpers({
 Template.singlecommentbox.helpers({
   sentiment: function () {
     // return this.sentiment;
+  }
+});
+
+Template.sentimentribbon.helpers({
+  topcomments: function(){
+    return Comments.find({sentiment: this.name});
   }
 });
 
