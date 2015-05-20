@@ -19,7 +19,7 @@ Template.sentimentcard.events({
  * When reactive, do this:
  */
 Template.sentimentcard.helpers({
-  commentcounter: function(cardid) {
+  commentcounter: function() {
     return Comments.find({ topic: this._id }).count();
   }
 });

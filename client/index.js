@@ -36,11 +36,6 @@ Template.sentimentmap.onCreated(function() {
   });
 });
 
-Template.sentimentribbon.helpers({
-  topcomments: function(){
-    return Comments.find({sentiment: this.name});
-  }
-});
 
 
 
@@ -151,33 +146,3 @@ Template.commentbox.events({
 //db.comments.insert({topic: ObjectId("55540d606638db2164f2aca8"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:2, keywords: ["bonito", "hermoso"], text: "El cielo es bonito y muy hermoso"})
 /* Negative */
 //db.comments.insert({topic: ObjectId("55539ff2669903184654bd04"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:-2, keywords: ["malo", "pesimo"], text: "El servicio es pesimo y muy malo"})
-
-
-
-/*** Animations ***/
-
-/**** Sentiment Bars *****/
-
-Template.sentimentbars.events({
-  'click': function (event,template) {
-    template.$(".positive").animate({left: '10px'});
-    template.$(".verypositive").animate({left: '20px'});
-    template.$(".negative").animate({right: '10px'});
-    template.$(".verynegative").animate({right: '20px'});
-    template.$(".sentimentbar").css('box-shadow', '0px 2px 5px 0px rgba(0, 0, 0, 0.45)');
-    template.$(".emoticon").removeClass("hidden");
-    template.$(".bar-value").removeClass("hidden");
-    template.$(".dismiss-bars").removeClass("hidden");
-    template.$(".dismiss-bars").addClass("animated zoomIn");
-  },
-  'click .dismiss-bars': function (event, template) {
-    template.$(".positive").animate({left: '0px'});
-    template.$(".verypositive").animate({left: '0px'});
-    template.$(".negative").animate({right: '0px'});
-    template.$(".verynegative").animate({right: '0px'});
-    template.$(".sentimentbar").css('box-shadow', '');
-    template.$(".emoticon").addClass("hidden");
-    template.$(".bar-value").addClass("hidden");
-    template.$(".dismiss-bars").addClass("hidden");
-  }
-});
