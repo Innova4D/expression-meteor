@@ -37,31 +37,31 @@ Template.sentimentbars.helpers({
   'vnegative' : function (){
     var num   = Comments.find({topic: this._id, sentiment: -2}).count();
     var total = Comments.find({topic: this._id}).count();
-    Session.set('reactive-bars', this);
+    Session.set('reactive-bars', total);
     return Math.round((num/total) * 100) + "%";
   },
   'negative' : function (){
     var num   = Comments.find({topic: this._id, sentiment: -1}).count();
     var total = Comments.find({topic: this._id}).count();
-    Session.set('reactive-bars', this);
+    // Session.set('reactive-bars', this);
     return Math.round((num/total) * 100) + "%";
   },
   'neutral' : function (){
     var num   = Comments.find({topic: this._id, sentiment: 0}).count();
     var total = Comments.find({topic: this._id}).count();
-    Session.set('reactive-bars', this);
+    // Session.set('reactive-bars', this);
     return Math.round((num/total) * 100) + "%";
   },
   'positive' : function (){
     var num   = Comments.find({topic: this._id, sentiment: 1}).count();
     var total = Comments.find({topic: this._id}).count();
-    Session.set('reactive-bars', this);
+    // Session.set('reactive-bars', this);
     return Math.round((num/total) * 100) + "%";
   },
   'vpositive' : function (){
     var num   = Comments.find({topic: this._id, sentiment: 2}).count();
     var total = Comments.find({topic: this._id}).count();
-    Session.set('reactive-bars', this);
+    // Session.set('reactive-bars', this);
     return Math.round((num/total) * 100) + "%";
   },
 });
@@ -74,11 +74,12 @@ Template.sentimentbars.rendered = function () {
   var self = this;
 
   function saySomething(count) {
-    console.log(count);
+    // this.$(".verynegative").animate({height:400},2000);
+    console.log("asd");
   }
 
   Tracker.autorun(function () {
-    var count = Session.get('items');
+    var count = Session.get('reactive-bars');
     saySomething(count);
   });
 
