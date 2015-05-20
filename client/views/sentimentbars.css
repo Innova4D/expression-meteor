@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+
 }
 
 .dismiss-bars {
@@ -24,6 +25,7 @@
   -moz-transition: height 1s;
   transition: height 1s;
   border-radius: 2px 2px 0px 0px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.45);
   /*
   margin-left: 12px;
   -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
@@ -48,21 +50,26 @@
 /**** Sentiments ****/
 
 .verynegative {
-  background: #FF0035;
+  background: #e13b1d;
+  border-bottom: 4px solid #c8341a;
 }
 
 .negative {
   background: #FF8A00;
+  border-bottom: 4px solid #e56b05;
 }
 
 .neutral {
   background: #FBBF00;
+  border-bottom: 4px solid #dd9f08;
 }
 
 .positive {
-  background: #86C300;
+  background: #67c61a;
+  border-bottom: 4px solid #5db417;
 }
 
 .verypositive {
-  background: #00C273;
+  background: #18ba5f;
+  border-bottom: 4px solid #15a554;
 }

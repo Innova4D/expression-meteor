@@ -10,12 +10,11 @@ Meteor.startup(function() {
 
 Template.sentimentmap.helpers({
   mapOptions: function() {
-    // Make sure the maps API has loaded
     if (GoogleMaps.loaded()) {
-      // Map initialization options
       return {
-        center: new google.maps.LatLng(19.0435509, -98.2024121),
-        zoom: 12
+        center: new google.maps.LatLng(19.4333, -99.1333),
+        zoom: 4,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
       };
     }
   }
@@ -83,13 +82,13 @@ Template.singlecommentbox.rendered = function(){
     this.$(".user-sentiment").css('background-color', '#e5596b');
     break;
     case -1:
-    this.$(".user-sentiment").css('background-color', '#fd8a24');
+    this.$(".user-sentiment").css('background-color', '#e5596b');
     break;
     case 0:
     this.$(".user-sentiment").css('background-color', '#fabe2c');
     break;
     case 1:
-    this.$(".user-sentiment").css('background-color', '#88c124');
+    this.$(".user-sentiment").css('background-color', '#1cb970');
     break;
     case 2:
     this.$(".user-sentiment").css('background-color', '#1cb970');
@@ -97,6 +96,46 @@ Template.singlecommentbox.rendered = function(){
   }
 };
 
+Template.sentimentcard.rendered = function () {
+
+  var sf = this.$(".sentiment-card-front");
+  var sb = this.$(".sentiment-card-back");
+  var ab = this.$(".action-bar");
+  var ri = this.$(".ribbon");
+
+  switch (this.data.sentiment) {
+    case -2:
+    sf.css('background-color', '#d0495a');
+    sb.css('background-color', '#d0495a');
+    ab.css('background-color', '#ba4251');
+    ri.css('background-color', '#ba4251');
+    break;
+    case -1:
+    sf.css('background-color', '#f0cf3d');
+    sb.css('background-color', '#f0cf3d');
+    ab.css('background-color', '#be3a30');
+    ri.css('background-color', '#be3a30');
+    break;
+    case 0:
+    sf.css('background-color', '#f5be4d');
+    sb.css('background-color', '#f5be4d');
+    ab.css('background-color', '#dcaa45');
+    ri.css('background-color', '#dcaa45');
+    break;
+    case 1:
+    sf.css('background-color', '#88c124');
+    sb.css('background-color', '#88c124');
+    ab.css('background-color', '#be3a30');
+    ri.css('background-color', '#be3a30');
+    break;
+    case 2:
+    sf.css('background-color', '#39cb74');
+    sb.css('background-color', '#39cb74');
+    ab.css('background-color', '#30ad63');
+    ri.css('background-color', '#30ad63');
+    break;
+  }
+};
 
 /*
 * Insert a Comment to MongoDB from CommentBox.
@@ -151,6 +190,8 @@ Template.commentbox.events({
 /** Mongo Queries **/
 // db.topics.find()
 // db.topics.insert({name: "UDLAP", sentiment: 2, isActive: true,timestamp: new Date(),share: 0	});
+// db.topics.insert({name: "Puebla", sentiment: 0, isActive: true,timestamp: new Date(),share: 0	});
+// db.topics.insert({name: "Peña Nieto", sentiment: -2, isActive: true,timestamp: new Date(),share: 0	});
 /* Positive */
 //db.comments.insert({topic: ObjectId("55540d606638db2164f2aca8"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:2, keywords: ["bonito", "hermoso"], text: "El cielo es bonito y muy hermoso"})
 /* Negative */

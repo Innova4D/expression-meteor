@@ -42,7 +42,7 @@
   display: flex;
   align-items: center;
   margin: 0 auto;
-  background: #26ae60;
+  /*background: #26ae60;*/
   width: 320px;
   height: 50px;
   border-radius: 0px 0px 5px 5px;
@@ -62,8 +62,8 @@
 }
 
 .fa {
-  font-size: 27px;
-  color: white;
+  font-size: 24px;
+  color: rgba(255,255,255,0.85);
 }
 
 #share-card {
@@ -119,7 +119,7 @@
   left: 0;
   width:   100%;
   height: 300px;
-  background: #2ECC71;
+  /*background: #2ECC71;*/
   border-radius: 5px 5px 0px 0px;
   font-family: 'Roboto','Helvetica', sans-serif;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);
