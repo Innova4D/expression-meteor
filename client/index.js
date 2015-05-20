@@ -36,9 +36,25 @@ Template.sentimentmap.onCreated(function() {
   });
 });
 
-Template.sentimentcard.events({
-  'click .card-title': function (event,template) {
-    template.$(".sentiment-card").toggleClass('flip');
+Template.sentimentribbon.helpers({
+  topcomments: function(){
+    return Comments.find({sentiment: this.name});
+  }
+});
+
+
+
+Template.body.helpers({
+  topics: function () {
+    return Topics.find({});
+  }
+});
+
+
+Template.commentbox.helpers({
+  comments: function () {
+    var oid = this.id;
+    return Comments.find({topic: oid});
   }
 });
 
@@ -48,44 +64,12 @@ Template.commentbox.events({
   }
 });
 
-Template.sentimentcard.events({
-  'click .comment-card': function (event,template) {
-    var cardname = template.$(".card-title-front").text();
-    Blaze.renderWithData(Template.commentbox, {id: this._id, name: this.name}, $("body")[0]);
-  }
-});
-
-Template.body.helpers({
-  topics: function () {
-    return Topics.find({});
-  }
-});
-
-Template.sentimentcard.helpers({
-  commentcounter: function(cardid){
-    var oid = new Meteor.Collection.ObjectID(cardid._str);
-    return Comments.find({ topic: oid }).count();
-  }
-});
-
-Template.commentbox.helpers({
-  comments: function () {
-    var oid = this.id;
-    return Comments.find({topic: oid});
-  }
-});
-
 Template.singlecommentbox.helpers({
   sentiment: function () {
     // return this.sentiment;
   }
 });
 
-Template.sentimentribbon.helpers({
-  topcomments: function(){
-    return Comments.find({sentiment: this.name});
-  }
-});
 
 Template.singlecommentbox.rendered = function(){
   switch (this.data.sentiment) {
@@ -107,46 +91,6 @@ Template.singlecommentbox.rendered = function(){
   }
 };
 
-Template.sentimentcard.rendered = function () {
-
-  var sf = this.$(".sentiment-card-front");
-  var sb = this.$(".sentiment-card-back");
-  var ab = this.$(".action-bar");
-  var ri = this.$(".ribbon");
-
-  switch (this.data.sentiment) {
-    case -2:
-    sf.css('background-color', '#d0495a');
-    sb.css('background-color', '#d0495a');
-    ab.css('background-color', '#ba4251');
-    ri.css('background-color', '#ba4251');
-    break;
-    case -1:
-    sf.css('background-color', '#f0cf3d');
-    sb.css('background-color', '#f0cf3d');
-    ab.css('background-color', '#be3a30');
-    ri.css('background-color', '#be3a30');
-    break;
-    case 0:
-    sf.css('background-color', '#f5be4d');
-    sb.css('background-color', '#f5be4d');
-    ab.css('background-color', '#dcaa45');
-    ri.css('background-color', '#dcaa45');
-    break;
-    case 1:
-    sf.css('background-color', '#88c124');
-    sb.css('background-color', '#88c124');
-    ab.css('background-color', '#be3a30');
-    ri.css('background-color', '#be3a30');
-    break;
-    case 2:
-    sf.css('background-color', '#39cb74');
-    sb.css('background-color', '#39cb74');
-    ab.css('background-color', '#30ad63');
-    ri.css('background-color', '#30ad63');
-    break;
-  }
-};
 
 /*
 * Insert a Comment to MongoDB from CommentBox.

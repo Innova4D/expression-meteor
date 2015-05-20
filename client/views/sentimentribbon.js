@@ -1,32 +1,29 @@
 /*
- * Sentiment Card Logic.
- */
-
- /*
-  * When an event, do this:
-  */
-Template.sentimentcard.events({
-  'click .card-title': function (event,template) {
-    template.$(".sentiment-card").toggleClass('flip');
-  },
-  'click .comment-card': function (event,template) {
-    Blaze.renderWithData(Template.commentbox, {id: this._id, name: this.name}, $("body")[0]);
-  }
-});
-
+* Sentiment Ribbon Logic.
+*/
 
 /*
- * When reactive, do this:
- */
-Template.sentimentcard.helpers({
-  commentcounter: function(cardid) {
-    return Comments.find({ topic: this._id }).count();
+* When an event, do this:
+*/
+Template.sentimentribbon.events({ });
+
+/*
+* When reactive, do this:
+*/
+Template.sentimentribbon.helpers({
+  randomcomments: function(){
+    var array = Comments.find({topic: this._id, sentiment: this.sentiment}).fetch();
+    var randomIndex = Math.floor(Math.random() * array.length);
+    var element = array[randomIndex];
+    if(element) {
+      return element.text;
+    }
   }
 });
 
 /*
- * When the card renders, do this:
- */
+* When the card renders, do this:
+*/
 Template.sentimentcard.rendered = function () {
 
   var sf = this.$(".sentiment-card-front");
