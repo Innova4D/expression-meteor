@@ -46,10 +46,13 @@
   width: 320px;
   height: 50px;
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);
+  /*box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);*/
   top: 300px;
   position:relative;
   /*z-index: -1;*/
+  border-left:  1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
+  border-bottom:1px solid #d7d7d7;
 }
 
 .sentiment-card .card-title .glyphicon {
@@ -87,9 +90,9 @@
 }
 
 /*.action-element:active {
-  background: #2ecc71;
-  border: 0px;
-  box-shadow: 0px;
+background: #2ecc71;
+border: 0px;
+box-shadow: 0px;
 }*/
 
 /*Flip Code*/
@@ -122,7 +125,10 @@
   /*background: #2ECC71;*/
   border-radius: 5px 5px 0px 0px;
   font-family: 'Roboto','Helvetica', sans-serif;
-  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);
+  /*box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);*/
+  border-top:   1px solid #d7d7d7;
+  border-left:  1px solid #d7d7d7;
+  border-right: 1px solid #d7d7d7;
 }
 
 /* front pane, placed above back */
