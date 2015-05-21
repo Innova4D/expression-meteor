@@ -37,32 +37,37 @@ Template.sentimentbars.helpers({
   'vnegative' : function (){
     var num   = Comments.find({topic: this._id, sentiment: -2}).count();
     var total = Comments.find({topic: this._id}).count();
-    Session.set('reactive-bars', total);
-    return Math.round((num/total) * 100) + "%";
+    var avg   = Math.round((num/total) * 100);
+    Session.set("bar-avg",avg);
+    return avg;
   },
   'negative' : function (){
     var num   = Comments.find({topic: this._id, sentiment: -1}).count();
     var total = Comments.find({topic: this._id}).count();
-    // Session.set('reactive-bars', this);
-    return Math.round((num/total) * 100) + "%";
+    var avg   = Math.round((num/total) * 100);
+    Session.set("bar-avg",avg);
+    return avg;
   },
   'neutral' : function (){
     var num   = Comments.find({topic: this._id, sentiment: 0}).count();
     var total = Comments.find({topic: this._id}).count();
-    // Session.set('reactive-bars', this);
-    return Math.round((num/total) * 100) + "%";
+    var avg   = Math.round((num/total) * 100);
+    Session.set("bar-avg",avg);
+    return avg;
   },
   'positive' : function (){
     var num   = Comments.find({topic: this._id, sentiment: 1}).count();
     var total = Comments.find({topic: this._id}).count();
-    // Session.set('reactive-bars', this);
-    return Math.round((num/total) * 100) + "%";
+    var avg   = Math.round((num/total) * 100);
+    Session.set("bar-avg",avg);
+    return avg;
   },
   'vpositive' : function (){
     var num   = Comments.find({topic: this._id, sentiment: 2}).count();
     var total = Comments.find({topic: this._id}).count();
-    // Session.set('reactive-bars', this);
-    return Math.round((num/total) * 100) + "%";
+    var avg   = Math.round((num/total) * 100);
+    Session.set("bar-avg",avg);
+    return avg;
   },
 });
 
@@ -72,15 +77,24 @@ Template.sentimentbars.helpers({
 Template.sentimentbars.rendered = function () {
 
   var self = this;
+  function animateBarHeight(bar) {
+    var minval = 25;
+    var vnegative = self.$(".vnegative-value").text();
+    var negative  = self.$(".negative-value").text();
+    var neutral   = self.$(".neutral-value").text();
+    var positive  = self.$(".positive-value").text();
+    var vpositive = self.$(".vpositive-value").text();
 
-  function saySomething(count) {
-    // this.$(".verynegative").animate({height:400},2000);
-    console.log("asd");
+    self.$(".verynegative").animate({'height': minval + parseFloat(vnegative)+'px'});
+    self.$(".negative").animate({'height': minval + parseFloat(negative)+'px'});
+    self.$(".neutral").animate({'height': minval + parseFloat(neutral)+'px'});
+    self.$(".positive").animate({'height': minval + parseFloat(positive)+'px'});
+    self.$(".verypositive").animate({'height': minval + parseFloat(vpositive)+'px'});
   }
 
   Tracker.autorun(function () {
-    var count = Session.get('reactive-bars');
-    saySomething(count);
+    var bar = Session.get("bar-avg");
+    animateBarHeight(bar);
   });
 
 };

@@ -59,25 +59,29 @@
 .verynegative {
   background: #e13b1d;
   border-bottom: 4px solid #c8341a;
-  height: 40px;
+  height: 100px;
 }
 
 .negative {
   background: #FF8A00;
   border-bottom: 4px solid #e56b05;
+  height: 100px;
 }
 
 .neutral {
   background: #FBBF00;
   border-bottom: 4px solid #dd9f08;
+  height: 100px;
 }
 
 .positive {
   background: #67c61a;
   border-bottom: 4px solid #5db417;
+  height: 100px;
 }
 
 .verypositive {
   background: #18ba5f;
   border-bottom: 4px solid #15a554;
+  height: 100px;
 }
