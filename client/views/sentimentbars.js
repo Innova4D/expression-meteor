@@ -78,7 +78,7 @@ Template.sentimentbars.rendered = function () {
 
   var self = this;
   function animateBarHeight(bar) {
-    var minval = 25;
+    var minval = 30;
     var vnegative = self.$(".vnegative-value").text();
     var negative  = self.$(".negative-value").text();
     var neutral   = self.$(".neutral-value").text();
