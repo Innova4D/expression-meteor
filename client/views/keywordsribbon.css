@@ -1,0 +1,30 @@
+.keyword {
+  color: #ececec;
+  font-size: 10px;
+  font-weight: 300;
+  font-family: roboto, helvetica;
+  opacity: 0.9;
+  background: #1b80c6;
+  border-radius: 5px;
+  border: 1px solid #1a6498;
+
+  padding: 0px 0px 0px 0px;
+  margin: 2px;
+  text-transform: capitalize;
+}
+
+.keyword-conainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+.keyword-title {
+  padding: 4px 5px 5px 5px;
+  color: #ececec;
+  font-size: 14px;
+  font-weight: 100;
+  font-family: roboto, helvetica;
+  text-shadow: 0px 0px 5px rgba(25,25,25, 0.45);
+}

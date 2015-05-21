@@ -1,0 +1,10 @@
+<template name="keywordsribbon">
+  <div class="ribbon stopselect">
+    <div class="keyword-title">La gente dice:</div>
+    <div class="keyword-conainer">
+      {{#each keywords}}
+      <paper-button class="keyword">{{this}}</paper-button>
+      {{/each}}
+    </div>
+  </div>
+</template>
