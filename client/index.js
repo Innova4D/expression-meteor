@@ -136,6 +136,25 @@ Template.commentbox.events({
   }
 });
 
+Template.commentbox.rendered = function(){
+  switch (this.data.avgsentiment) {
+    case 0:
+    this.$(".commentbox-sentiment-dot").css('background-color', '#e35a6d');
+    break;
+    case 1:
+    this.$(".commentbox-sentiment-dot").css('background-color', '#e35a6d');
+    break;
+    case 2:
+    this.$(".commentbox-sentiment-dot").css('background-color', '#f4bd57');
+    break;
+    case 3:
+    this.$(".commentbox-sentiment-dot").css('background-color', '#41ca77');
+    break;
+    case 4:
+    this.$(".commentbox-sentiment-dot").css('background-color', '#41ca77');
+    break;
+  }
+};
 
 /** Mongo Queries **/
 // db.topics.find()

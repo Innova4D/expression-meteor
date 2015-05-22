@@ -4,13 +4,14 @@
   font-weight: 300;
   font-family: roboto, helvetica;
   opacity: 0.9;
-  background: #1b80c6;
+  background: none;
   border-radius: 5px;
-  border: 1px solid #1a6498;
+  border: 1px solid rgba(255,255,255,0.45);
 
   padding: 0px 0px 0px 0px;
   margin: 2px;
   text-transform: capitalize;
+  text-shadow: 0px 0px 5px rgba(25,25,25, 0.45);
 }
 
 .keyword-conainer{
