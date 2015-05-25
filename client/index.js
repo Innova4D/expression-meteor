@@ -101,9 +101,10 @@ Template.commentbox.events({
       // author: null,
       posted: new Date(),
       loc: {lng: 98.91, lat: 110.23},
-      sentiment: random,
-      keywords: ["bonito", "hermoso"],
-      text: template.$(".comment-box-input").val()
+      sentiment: null,
+      keywords: null,
+      text: template.$(".comment-box-input").val(),
+      source: "app"
     });
     // Clear form
     template.$(".comment-box-input").val("");
@@ -122,9 +123,10 @@ Template.commentbox.events({
         // author: null,
         posted: new Date(),
         loc: {lng: 98.91, lat: 110.23},
-        sentiment: random,
-        keywords: ["bonito", "hermoso"],
-        text: template.$(".comment-box-input").val()
+        sentiment: null,
+        keywords: null,
+        text: template.$(".comment-box-input").val(),
+        source: "app"
       });
       // Clear form
       template.$(".comment-box-input").val("");
