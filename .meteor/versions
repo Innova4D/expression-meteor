@@ -36,6 +36,7 @@ mongo-livedata@1.0.8
 natestrauser:animate-css@3.2.6
 observe-sequence@1.0.6
 ordered-dict@1.0.3
+qnub:emojione@0.0.3
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5

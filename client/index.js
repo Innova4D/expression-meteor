@@ -95,14 +95,14 @@ Template.singlecommentbox.rendered = function(){
 Template.commentbox.events({
   "click .comment-box-send": function (event, template) {
     var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
-
+    console.log(this);
     Comments.insert({
       topic: this.id,
       // author: null,
       posted: new Date(),
       loc: {lng: 98.91, lat: 110.23},
-      sentiment: random,
-      keywords: ["bonito", "hermoso"],
+      sentiment: null,
+      keywords: null,
       text: template.$(".comment-box-input").val(),
       source: "app"
     });
@@ -123,8 +123,8 @@ Template.commentbox.events({
         // author: null,
         posted: new Date(),
         loc: {lng: 98.91, lat: 110.23},
-        sentiment: random,
-        keywords: ["bonito", "hermoso"],
+        sentiment: null,
+        keywords: null,
         text: template.$(".comment-box-input").val(),
         source: "app"
       });
