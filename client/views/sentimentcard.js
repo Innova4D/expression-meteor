@@ -60,10 +60,10 @@ Template.sentimentcard.rendered = function () {
       ri.css('background-color', '#ba4251');
       break;
       case 1: //Negative
-      sf.css('background-color', '#f0cf3d');
-      sb.css('background-color', '#f0cf3d');
-      ab.css('background-color', '#be3a30');
-      ri.css('background-color', '#be3a30');
+      sf.css('background-color', '#d0495a');
+      sb.css('background-color', '#d0495a');
+      ab.css('background-color', '#ba4251');
+      ri.css('background-color', '#ba4251');
       break;
       case 2: //Neutral
       sf.css('background-color', '#f5be4d');

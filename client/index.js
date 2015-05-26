@@ -101,8 +101,8 @@ Template.commentbox.events({
       // author: null,
       posted: new Date(),
       loc: {lng: 98.91, lat: 110.23},
-      sentiment: null,
-      keywords: null,
+      sentiment: random,
+      keywords: ["bonito", "hermoso"],
       text: template.$(".comment-box-input").val(),
       source: "app"
     });
@@ -123,8 +123,8 @@ Template.commentbox.events({
         // author: null,
         posted: new Date(),
         loc: {lng: 98.91, lat: 110.23},
-        sentiment: null,
-        keywords: null,
+        sentiment: random,
+        keywords: ["bonito", "hermoso"],
         text: template.$(".comment-box-input").val(),
         source: "app"
       });
