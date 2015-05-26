@@ -13,19 +13,26 @@
   <link rel="import" href="bower_components/paper-input/paper-input.html">
   <link rel="import" href="bower_components/paper-button/paper-button.html">
   <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
+  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
+  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
 </head>
 
 <body>
-  <core-header-panel mode="waterfall-tall" tallclass="medium-tall" id="core_header_panel">
+  <core-header-panel id="core_header_panel">
     <core-toolbar class="core-toolbar container-fluid">
-      <core-icon-button icon="menu" class="header-hamburguer"></core-icon-button>
-      <div class="header-text stopselect">
-        <div id="title">Expression</div>
-        <!-- <div id="subtitle">¿Cuál es el sentimiento?</div> -->
+      <div class="top-header" horizontal layout>
+        <paper-icon-button icon="menu" class="header-hamburguer"></paper-icon-button>
+        <div class="header-text stopselect">
+          <div id="title">Expression</div>
+        </div>
+        <paper-icon-button icon="search" class="search-header"></paper-icon-button>
       </div>
-      <div class="header-session-buttons">
-        <paper-button class="btn-access"  >Login </paper-button>
-        <paper-button class="btn-registry">Sign Up</paper-button>
+      <div class="bottom fit" horizontal layout>
+        <paper-tabs selected="1" role="tablist">
+          <paper-tab role="tab">Pinned</paper-tab>
+          <paper-tab role="tab" class="core-selected" active>Trending</paper-tab>
+          <paper-tab role="tab">Nearby</paper-tab>
+        </paper-tabs>
       </div>
     </core-toolbar>
     <section id="section" class="container-fluid topics sentiment-cards-section">

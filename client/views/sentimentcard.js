@@ -12,6 +12,10 @@ Template.sentimentcard.events({
   'click .comment-card': function (event,template) {
     var avg = parseInt(template.$('.avg-sentiment').text());
     Blaze.renderWithData(Template.commentbox, {id: this._id, name: this.name, avgsentiment: avg}, $("body")[0]);
+  },
+  'click .share-card': function (event,template) {
+    var avg = parseInt(template.$('.avg-sentiment').text());
+    Blaze.renderWithData(Template.sharecard, {id: this._id, name: this.name, avgsentiment: avg}, template.$('.sentiment-card')[0]);
   }
 });
 
@@ -31,7 +35,8 @@ Template.sentimentcard.helpers({
     m[3] = Comments.find({topic: this._id, sentiment:  1}).count();
     m[4] = Comments.find({topic: this._id, sentiment:  2}).count();
     maxValue = Math.max.apply(this, m);
-    Session.set("card-avg",maxValue);
+    Session.set("card-avg",$.inArray(maxValue,m));
+    console.log(maxValue + " aaa");
     return $.inArray(maxValue,m);
   }
 });

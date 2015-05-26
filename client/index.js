@@ -95,7 +95,6 @@ Template.singlecommentbox.rendered = function(){
 Template.commentbox.events({
   "click .comment-box-send": function (event, template) {
     var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
-    console.log(this);
     Comments.insert({
       topic: this.id,
       // author: null,

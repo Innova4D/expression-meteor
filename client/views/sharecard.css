@@ -1,0 +1,9 @@
+.action-bar-share-card {
+  z-index: 10000;
+  position: absolute;
+  top: 0px;
+  left: 16px;
+  width: 90.8%;
+  height: 86%;
+  border-bottom:1px solid rgba(48, 48, 48,0.1);
+}
