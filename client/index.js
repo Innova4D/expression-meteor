@@ -55,7 +55,10 @@ Template.commentbox.helpers({
 
 Template.commentbox.events({
   'click .close-comment-box': function (event,template) {
-    template.$(".comment-box").remove();
+    template.$(".comment-box").removeClass("animated fadeIn").addClass("animated fadeOut");
+    template.$(".comment-box").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      template.$(".comment-box").remove();
+    });
   }
 });
 

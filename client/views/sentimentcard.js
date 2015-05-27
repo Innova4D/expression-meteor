@@ -15,7 +15,21 @@ Template.sentimentcard.events({
   },
   'click .share-card': function (event,template) {
     var avg = parseInt(template.$('.avg-sentiment').text());
+    template.$('.past-events').css("background", "#41ca77");
+    template.$('.comment-card').css("background", "#41ca77");
+    template.$('.share-card-fa').removeClass("fa-share-alt").addClass("fa-times");
+    template.$('.share-card').removeClass("share-card").addClass("dismiss-share-card");
     Blaze.renderWithData(Template.sharecard, {id: this._id, name: this.name, avgsentiment: avg}, template.$('.sentiment-card')[0]);
+  },
+  'click .dismiss-share-card': function (event,template) {
+    template.$('.action-bar-share-card').removeClass("animated fadeIn").addClass("animated fadeOut");
+    template.$('.dismiss-share-card').removeClass("dismiss-share-card").addClass("share-card");
+    template.$('.past-events').css("background", "none");
+    template.$('.comment-card').css("background", "none");
+    template.$('.share-card-fa').removeClass("fa-times").addClass("fa-share-alt");
+    template.$('.action-bar-share-card').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      template.$('.action-bar-share-card').remove();
+    });
   }
 });
 

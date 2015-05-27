@@ -52,7 +52,21 @@
 .share-ripple {
   color: #ececec;
 }
-/*
+
 .share-title {
-  margin-top: 25px;
-}*/
+  margin: 5px;
+}
+
+.share-subtitle {
+  padding: 8px;
+  opacity: 0.65;
+  width:  100%;
+  font-size: 21px;
+  font-weight: 100;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
