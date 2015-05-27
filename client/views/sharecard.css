@@ -3,7 +3,56 @@
   position: absolute;
   top: 0px;
   left: 16px;
-  width: 90.8%;
+  width: 90.9%;
   height: 86%;
   border-bottom:1px solid rgba(48, 48, 48,0.1);
+
+  display: flex;
+  flex-direction: column;
+  align-items:    center;
+  align-content:  center;
+  justify-content:center;
 }
+
+.share-stitle {
+  color: white;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  margin: 5px;
+}
+
+.social-buttons-share {
+  display: flex;
+  flex-direction: row;
+  align-items:    center;
+  align-content:  center;
+  justify-content:center;
+}
+
+.share-button {
+  margin: 10px;
+  width: 90px;
+  height:90px;
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  align-items:    center;
+  align-content:  center;
+  justify-content:center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.share-fa {
+  opacity: 0.75;
+  font-size: 45px;
+}
+
+.share-ripple {
+  color: #ececec;
+}
+/*
+.share-title {
+  margin-top: 25px;
+}*/

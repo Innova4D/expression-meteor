@@ -1,3 +1,24 @@
 <template name="sharecard">
-  <div class="action-bar-share-card animated zoomInUp"> 123</div>
+  <div class="action-bar-share-card stopselect animated zoomInUp">
+    <div class="social-buttons-share">
+      <div class="share-button share-facebook-button">
+        <div class="share-fa fa fa-facebook"></div>
+        <div class="share-stitle">Facebook</div>
+        <paper-ripple class="share-ripple circle recenteringTouch" fit></paper-ripple>
+      </div>
+      <div class="share-button share-twitter-button">
+        <div class="share-fa fa fa-twitter"></div>
+        <div class="share-stitle">Twitter</div>
+        <paper-ripple class="share-ripple circle recenteringTouch" fit></paper-ripple>
+      </div>
+    </div>
+    <div class="share-button pin-sentiment-card">
+      <div class="share-fa fa fa-thumb-tack"></div>
+      <div class="share-stitle">Pin to Watchlist</div>
+      <paper-ripple class="share-ripple circle recenteringTouch" fit></paper-ripple>
+    </div>
+    <div class="share-title card-title">
+      {{name}}
+    </div>
+  </div>
 </template>
