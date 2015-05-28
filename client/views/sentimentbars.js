@@ -37,7 +37,6 @@ Template.sentimentbars.helpers({
   'vnegative' : function (){
     var avg   = Math.round((this.bars.terrible/this.total) * 100);
     Session.set("bar-avg",avg);
-    console.log(this);
     return avg;
   },
   'negative' : function (){

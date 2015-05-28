@@ -19,8 +19,8 @@ Template.sentimentcard.events({
       case 0: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
       case 1: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
       case 2: template.$('.action-bar').css("background-color", "#dcaa45"); break;
-      case 3: template.$('.action-bar').css("background-color", "#30ad63"); break;
-      case 4: template.$('.action-bar').css("background-color", "#30ad63"); break;
+      case 3: template.$('.action-bar').css("background-color", "#41ca77"); break;
+      case 4: template.$('.action-bar').css("background-color", "#41ca77"); break;
     }
     template.$('.share-card-fa').removeClass("fa-share-alt").addClass("fa-times");
     template.$('.share-card').removeClass("share-card").addClass("dismiss-share-card");
@@ -30,8 +30,8 @@ Template.sentimentcard.events({
     template.$('.action-bar-share-card').removeClass("animated fadeIn").addClass("animated fadeOut");
     var avg = parseInt(template.$('.avg-sentiment').text());
     switch (avg) {
-      case 0: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
-      case 1: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
+      case 0: template.$('.action-bar').css("background-color", "#b84353"); break;
+      case 1: template.$('.action-bar').css("background-color", "#b84353"); break;
       case 2: template.$('.action-bar').css("background-color", "#dcaa45"); break;
       case 3: template.$('.action-bar').css("background-color", "#30ad63"); break;
       case 4: template.$('.action-bar').css("background-color", "#30ad63"); break;
@@ -60,8 +60,9 @@ Template.sentimentcard.helpers({
     m[3] = this.bars.good;
     m[4] = this.bars.excellent;
     maxValue = Math.max.apply(this, m);
-    Session.set("card-avg",$.inArray(maxValue,m));
-    return $.inArray(maxValue,m);
+    var position = $.inArray(maxValue,m);
+    Session.set("card-avg",position);
+    return position;
   },
   dataSource: function() {
     if(this.creator == "ReactiveTwitter")
@@ -75,7 +76,6 @@ Template.sentimentcard.helpers({
 Template.sentimentcard.rendered = function () {
   var self = this;
   function animateCardBackground(bar) {
-
     var sf = self.$(".sentiment-card-front");
     var sb = self.$(".sentiment-card-back");
     var ab = self.$(".action-bar");
