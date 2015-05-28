@@ -20,7 +20,9 @@
 
 <body>
   <core-scaffold fit>
-    <core-header-panel navigation mode="seamed" class="core-header-panel stopselect"></core-header-panel>
+    <core-header-panel navigation mode="seamed" class="core-header-panel stopselect">
+      {{> loginButtons}}
+    </core-header-panel>
     <core-toolbar class="core-toolbar medium-tall" tool>
       <div class="header-title stopselect">Expression</div>
       <paper-icon-button icon="search" class="search-header"></paper-icon-button>

@@ -53,6 +53,7 @@
   border-left:  1px solid #d7d7d7;
   border-right: 1px solid #d7d7d7;
   border-bottom:1px solid #d7d7d7;
+  line-height: 0;
 }
 
 .sentiment-card .card-title .glyphicon {
@@ -136,17 +137,25 @@ box-shadow: 0px;
   z-index: 2;
   /* for firefox 31 */
   transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
 
   /** Flex positioning **/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+
+  /** Safari **/
+  -webkit-display: flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: flex-end;
 }
 
 /* back, initially hidden pane */
 .sentiment-card-back {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
   display: flex;
   flex-direction: column;
   align-items: center;

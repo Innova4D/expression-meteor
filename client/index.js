@@ -53,6 +53,11 @@ Template.commentbox.helpers({
   }
 });
 
+
+Template.loginButtons.rendered = function(){
+    Accounts._loginButtonsSession.set('dropdownVisible', true);
+};
+
 Template.commentbox.events({
   'click .close-comment-box': function (event,template) {
     template.$(".comment-box").removeClass("animated fadeIn").addClass("animated fadeOut");

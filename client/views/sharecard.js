@@ -20,7 +20,6 @@ Template.sharecard.rendered = function () {
     var self = this;
     function animateCardBackground(bar) {
       var actioncard = self.$(".action-bar-share-card");
-      console.log(bar);
       // switch (this.data.sentiment) {
       switch (bar) {
         case 0: //verynegative

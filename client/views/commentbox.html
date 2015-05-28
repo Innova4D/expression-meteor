@@ -1,20 +1,13 @@
 <template name="commentbox">
   <div class="hidden sentiment-card-id">{{id}}</div>
   <div class="comment-box animated fadeIn">
-    <core-header-panel mode="waterfall" id="core_header_panel" class="comment-box-header-panel">
-      <core-toolbar class="core-toolbar comment-box-toolbar">
-        <paper-fab class="close-comment-box" icon="close"></paper-fab>
-        <div class="comment-box-top">
-          <h1 class="comment-box-title">{{name}}</h1>
-        </div>
-
-        <div class="past-comments">
-          <div class="commentbox-sentiment-dot"></div>
-          <!-- <div class="fa fa-clock-o comments-past-button"></div> -->
-        </div>
-
+    <core-header-panel class="comment-box-core-header-panel">
+      <core-toolbar class="comment-box-toolbar">
+        <paper-fab icon="close" class="close-comment-box"></paper-fab>
+        <h1  class="comment-box-title">{{name}}</h1>
+        <div class="commentbox-sentiment-dot"></div>
       </core-toolbar>
-      <section class="container-fluid comment-box-section">
+      <section class="comment-box-section">
         {{#each comments}}
           {{>singlecommentbox}}
         {{/each}}

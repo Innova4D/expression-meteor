@@ -35,37 +35,28 @@ Template.sentimentbars.events({
 */
 Template.sentimentbars.helpers({
   'vnegative' : function (){
-    var num   = Comments.find({topic: this._id, sentiment: -2}).count();
-    var total = Comments.find({topic: this._id}).count();
-    var avg   = Math.round((num/total) * 100);
+    var avg   = Math.round((this.bars.terrible/this.total) * 100);
     Session.set("bar-avg",avg);
+    console.log(this);
     return avg;
   },
   'negative' : function (){
-    var num   = Comments.find({topic: this._id, sentiment: -1}).count();
-    var total = Comments.find({topic: this._id}).count();
-    var avg   = Math.round((num/total) * 100);
+    var avg   = Math.round((this.bars.bad/this.total) * 100);
     Session.set("bar-avg",avg);
     return avg;
   },
   'neutral' : function (){
-    var num   = Comments.find({topic: this._id, sentiment: 0}).count();
-    var total = Comments.find({topic: this._id}).count();
-    var avg   = Math.round((num/total) * 100);
+    var avg   = Math.round((this.bars.neutral/this.total) * 100);
     Session.set("bar-avg",avg);
     return avg;
   },
   'positive' : function (){
-    var num   = Comments.find({topic: this._id, sentiment: 1}).count();
-    var total = Comments.find({topic: this._id}).count();
-    var avg   = Math.round((num/total) * 100);
+    var avg   = Math.round((this.bars.good/this.total) * 100);
     Session.set("bar-avg",avg);
     return avg;
   },
   'vpositive' : function (){
-    var num   = Comments.find({topic: this._id, sentiment: 2}).count();
-    var total = Comments.find({topic: this._id}).count();
-    var avg   = Math.round((num/total) * 100);
+    var avg   = Math.round((this.bars.excellent/this.total) * 100);
     Session.set("bar-avg",avg);
     return avg;
   },

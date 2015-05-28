@@ -1,18 +1,10 @@
 html, body {
   height: 100%;
-  margin: 0;
-  padding:0;
-  background: #f4f4f4;
-}
-
-* {
-  margin: 0;
-  padding:0;
 }
 
 /*** Other stuff ***/
 
-.core-header-panel {
+core-scaffold .core-header-panel {
   background: #34495d;
   height: 100%;
 }
@@ -34,27 +26,27 @@ core-scaffold::shadow #menuButton {
   position: absolute;
 }
 
-.core-toolbar{
+core-scaffold .core-toolbar{
   position: absolute;
   width: 100%;
   background: #34495d;
 }
 
-.top-header {
+core-scaffold .top-header {
   top: 0;
   height:100%;
   width: 100%;
   position: absolute;
 }
 
-.search-header {
+core-scaffold .search-header {
   right: 25px;
   padding:5px;
   width: 30px;
   height:30px;
 }
 
-.sentiment-cards-section {
+core-scaffold .sentiment-cards-section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -66,14 +58,14 @@ core-scaffold::shadow #menuButton {
    margin: 0;
 }
 
-.header-title {
+core-scaffold .header-title {
   font-weight: 100;
   font-family: 'Kaushan Script', cursive;
   font-size: 38px;
   text-overflow: ellipsis;
   cursor: pointer;
   width: 100%;
-  color: #bec6cc;
+  color: #ececec;
   padding-left: 20px;
 }
 
@@ -86,7 +78,7 @@ core-scaffold::shadow #menuButton {
   user-select: none;
 }
 
-.paper-tabs {
+core-scaffold .paper-tabs {
   position: absolute;
   bottom: 0px;
   left: -16px;
@@ -94,20 +86,86 @@ core-scaffold::shadow #menuButton {
   width: 100%;
 }
 
-paper-tabs {
+core-scaffold paper-tabs {
   width: 100%;
   font-weight: 100;
   background: #39516b;
-  border-bottom: 1px solid #314557;
+  border-bottom: 1px solid #3f556e;
   font-family: 'Roboto','Helvetica', sans-serif;
 }
 
-paper-tab::shadow #ink {
+core-scaffold paper-tab::shadow #ink {
   color: #adb6be;
+  cursor: pointer;
 }
 
-paper-tabs::shadow #selectionBar {
+core-scaffold paper-tabs::shadow #selectionBar {
   background-color: #eeeeee;
-  /*background-color: white;*/
   height: 4px;
+}
+
+
+/** Login **/
+
+#login-buttons {
+  background: #3a516a;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+.login-link-text {
+  display: none;
+}
+
+.login-close-text {
+  display: none;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  color: white;
+}
+.login-form input {
+  border-radius: 3px;
+  border: 1px solid #37336b;
+  background: white;
+  color: black;
+  padding: 3px;
+  margin: 2px;
+}
+
+#login-email-label-and-input {
+  align-self: flex-end;
+}
+
+#login-password-label-and-input {
+  align-self: flex-end;
+}
+
+.login-button-form-submit {
+  align-self: flex-end;
+  border: 1px solid #afb9c4;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  color: #f4f5f7;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.error-message {
+  color: #ce4a5c;
+}
+
+.additional-link-container a {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.additional-link-container a:hover {
+  color: #a8b3be;
+  text-decoration: none;
 }

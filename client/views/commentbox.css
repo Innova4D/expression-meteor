@@ -3,37 +3,42 @@
  *
  */
 .comment-box {
-  position: absolute;
   top: 0;
-  /*background: rgba(27, 128, 198, 0.9);*/
+  position: absolute;
   background: #f6f7f8;
   width: 100%;
-  height: 100%;
-  z-index: 100000;
+  height:100%;
+  z-index:100;
 }
 
-.comment-box-toolbar{
-  border-bottom: 5px solid #1f73af;
-  height: 90px;
-  padding: 5px;
+.comment-box-core-header-panel {
+  height: 110px;
+  background: #34495c;
 }
 
-paper-fab {
+.comment-box .comment-box-toolbar{
+  background: #34495c;
+  border-bottom: 8px solid #3a516a;
+  height: 110px;
+  padding: 15px;
+}
+
+.comment-box paper-fab {
   background: #2baac4;
 }
 
-.close-comment-box {
+.comment-box .close-comment-box {
   background: #e75869;
 }
 
-.comment-box-title {
-  font-family: roboto;
+.comment-box .comment-box-title {
+  font-family: roboto, Helvetica, sans-serif;
   color: white;
   font-size: 28px;
   font-weight: 100;
 }
 
-.commentbox-sentiment-dot {
+.comment-box .commentbox-sentiment-dot {
   width: 10px;
   height:10px;
   background: #68ca75;
@@ -42,12 +47,7 @@ paper-fab {
   float: left;
 }
 
-.comments-past-button {
-  float: right;
-  padding-left: 50px;
-}
-
-.card-sentiment-dot {
+.comment-box .card-sentiment-dot {
   width: 10px;
   height:10px;
   background: #68ca75;
@@ -56,17 +56,14 @@ paper-fab {
 }
 
 .comment-box-section {
-  background: #f6f7f8;
+  background: red;
   padding-bottom: 60px;
   height: 100%;
-  overflow:hidden;
   justify-content: space-around;
   flex-direction: column;
 }
 
-.comment-box-bottom {
-  position: flex;
-  flex-direction: row;
+.comment-box .comment-box-bottom {
   background: #f6f7f8;
   position: absolute;
   bottom: 0px;
@@ -74,14 +71,14 @@ paper-fab {
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
 }
 
-.comment-box-input{
+.comment-box .comment-box-input{
   flex: 3 0 0;
   width: 75%;
   margin: 5px;
   padding-left: 20px;
 }
 
-.comment-box-send{
+.comment-box .comment-box-send{
   position: absolute;
   bottom: 25px;
   align-self: flex-end;

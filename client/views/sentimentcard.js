@@ -15,16 +15,28 @@ Template.sentimentcard.events({
   },
   'click .share-card': function (event,template) {
     var avg = parseInt(template.$('.avg-sentiment').text());
-    template.$('.past-events').css("background", "#41ca77");
-    template.$('.comment-card').css("background", "#41ca77");
+    if(this.avgSen < 0) {
+      template.$('.action-bar').css("background-color", "#ce4a5c"); //Negative
+      template.$('.share-card').css("background-color", "#b84353"); //Negative
+    } else if (this.avgSen == 0) {
+      template.$('.action-bar').css("background", "#dcaa45"); //Neutral
+    } else if (this.avgSen > 0) {
+      template.$('.action-bar').css("background", "#30ad63"); //Positive
+    }
     template.$('.share-card-fa').removeClass("fa-share-alt").addClass("fa-times");
     template.$('.share-card').removeClass("share-card").addClass("dismiss-share-card");
     Blaze.renderWithData(Template.sharecard, {id: this._id, name: this.name, avgsentiment: avg}, template.$('.sentiment-card')[0]);
   },
   'click .dismiss-share-card': function (event,template) {
     template.$('.action-bar-share-card').removeClass("animated fadeIn").addClass("animated fadeOut");
-    template.$('.past-events').css("background", "none");
-    template.$('.comment-card').css("background", "none");
+    if(this.avgSen < 0) {
+      template.$('.action-bar').css("background-color", "#b84353"); //Negative
+      template.$('.share-card').css("background-color", "transparent"); //Negative
+    } else if (this.avgSen == 0) {
+      template.$('.action-bar').css("background", "#dcaa45"); //Neutral
+    } else if (this.avgSen > 0) {
+      template.$('.action-bar').css("background", "#30ad63"); //Positive
+    }
     template.$('.share-card-fa').removeClass("fa-times").addClass("fa-share-alt");
     template.$('.action-bar-share-card').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       template.$('.action-bar-share-card').remove();
@@ -42,6 +54,7 @@ Template.sentimentcard.helpers({
     return Comments.find({ topic: this._id }).count();
   },
   sentimentavg: function() {
+    console.log(this.avgSen);
     var m = [];
     m[0] = Comments.find({topic: this._id, sentiment: -2}).count();
     m[1] = Comments.find({topic: this._id, sentiment: -1}).count();
@@ -50,7 +63,6 @@ Template.sentimentcard.helpers({
     m[4] = Comments.find({topic: this._id, sentiment:  2}).count();
     maxValue = Math.max.apply(this, m);
     Session.set("card-avg",$.inArray(maxValue,m));
-    console.log(maxValue + " aaa");
     return $.inArray(maxValue,m);
   }
 });
@@ -70,7 +82,6 @@ Template.sentimentcard.rendered = function () {
 
     var target =  parseInt(self.$(".avg-sentiment").text());
 
-    // switch (this.data.sentiment) {
     switch (target) {
       case 0: //verynegative
       sf.css('background-color', '#d0495a');
