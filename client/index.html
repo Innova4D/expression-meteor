@@ -15,30 +15,29 @@
   <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
   <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
 </head>
 
 <body>
-  <core-header-panel id="core_header_panel">
-    <core-toolbar class="core-toolbar container-fluid">
-      <div class="top-header" horizontal layout>
-        <paper-icon-button icon="menu" class="header-hamburguer"></paper-icon-button>
-        <div class="header-text stopselect">
-          <div id="title">Expression</div>
-        </div>
-        <paper-icon-button icon="search" class="search-header"></paper-icon-button>
-      </div>
-      <div class="bottom fit" horizontal layout>
-        <paper-tabs selected="1" role="tablist">
+  <core-scaffold fit>
+    <core-header-panel navigation mode="seamed" class="core-header-panel stopselect"></core-header-panel>
+    <core-toolbar class="core-toolbar medium-tall" tool>
+      <div class="header-title stopselect">Expression</div>
+      <paper-icon-button icon="search" class="search-header"></paper-icon-button>
+      <div class="bottom indent">
+        <paper-tabs class="paper-tabs" selected="1" role="tablist">
           <paper-tab role="tab">Pinned</paper-tab>
           <paper-tab role="tab" class="core-selected" active>Trending</paper-tab>
           <paper-tab role="tab">Nearby</paper-tab>
         </paper-tabs>
       </div>
     </core-toolbar>
-    <section id="section" class="container-fluid topics sentiment-cards-section">
-      {{#each topics}}
-      {{> sentimentcard}}
-      {{/each}}
-    </section>
-  </core-header-panel>
+    <div>
+      <section id="section" class="container-fluid topics sentiment-cards-section">
+        {{#each topics}}
+        {{> sentimentcard}}
+        {{/each}}
+      </section>
+    </div>
+  </core-scaffold>
 </body>

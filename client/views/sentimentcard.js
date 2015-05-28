@@ -23,12 +23,12 @@ Template.sentimentcard.events({
   },
   'click .dismiss-share-card': function (event,template) {
     template.$('.action-bar-share-card').removeClass("animated fadeIn").addClass("animated fadeOut");
-    template.$('.dismiss-share-card').removeClass("dismiss-share-card").addClass("share-card");
     template.$('.past-events').css("background", "none");
     template.$('.comment-card').css("background", "none");
     template.$('.share-card-fa').removeClass("fa-times").addClass("fa-share-alt");
     template.$('.action-bar-share-card').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       template.$('.action-bar-share-card').remove();
+      template.$('.dismiss-share-card').removeClass("dismiss-share-card").addClass("share-card");
     });
   }
 });

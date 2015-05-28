@@ -9,7 +9,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  background: #1b80c6;
+  /*background: #1b80c6;*/
+  background: #3498db;
 }
 
 .sentimentbar {

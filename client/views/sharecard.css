@@ -12,6 +12,8 @@
   align-items:    center;
   align-content:  center;
   justify-content:center;
+
+  border-radius: 5px 5px 0px 0px;
 }
 
 .share-stitle {
@@ -31,7 +33,6 @@
 }
 
 .share-button {
-  margin: 10px;
   width: 90px;
   height:90px;
   display: flex;
@@ -46,7 +47,7 @@
 
 .share-fa {
   opacity: 0.75;
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .share-ripple {
@@ -55,6 +56,8 @@
 
 .share-title {
   margin: 5px;
+  flex-grow: 1;
+  margin-top: 23px;
 }
 
 .share-subtitle {

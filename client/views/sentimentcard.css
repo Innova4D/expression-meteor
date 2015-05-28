@@ -147,7 +147,6 @@ box-shadow: 0px;
 /* back, initially hidden pane */
 .sentiment-card-back {
   transform: rotateY(180deg);
-
   display: flex;
   flex-direction: column;
   align-items: center;

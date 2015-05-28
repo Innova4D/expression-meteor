@@ -24,10 +24,10 @@ Template.sharecard.rendered = function () {
       // switch (this.data.sentiment) {
       switch (bar) {
         case 0: //verynegative
-        actioncard.css('background-color', '#d0495a');
+        actioncard.css('background-color', '#b84353');
         break;
         case 1: //Negative
-        actioncard.css('background-color', '#d0495a');
+        actioncard.css('background-color', '#b84353');
         break;
         case 2: //Neutral
         actioncard.css('background-color', '#f5be4d');
