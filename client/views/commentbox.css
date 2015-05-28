@@ -11,16 +11,18 @@
   z-index:100;
 }
 
-.comment-box-core-header-panel {
-  height: 110px;
-  background: #34495c;
-}
-
 .comment-box .comment-box-toolbar{
   background: #34495c;
   border-bottom: 8px solid #3a516a;
   height: 110px;
   padding: 15px;
+}
+
+
+.comment-box-core-header-panel {
+  height: 110px;
+  background: #34495c;
+  position: static;
 }
 
 .comment-box paper-fab {
@@ -56,7 +58,7 @@
 }
 
 .comment-box-section {
-  background: red;
+  background: #f6f7f8;
   padding-bottom: 60px;
   height: 100%;
   justify-content: space-around;
@@ -64,6 +66,8 @@
 }
 
 .comment-box .comment-box-bottom {
+  position: flex;
+  flex-direction: row;
   background: #f6f7f8;
   position: absolute;
   bottom: 0px;

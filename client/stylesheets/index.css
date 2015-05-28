@@ -51,7 +51,7 @@ core-scaffold .sentiment-cards-section {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  /*background: #e3e3e3;*/
+  background: white;
 }
 
 ::content > * {

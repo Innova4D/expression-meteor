@@ -7,11 +7,11 @@
         <h1  class="comment-box-title">{{name}}</h1>
         <div class="commentbox-sentiment-dot"></div>
       </core-toolbar>
-      <section class="comment-box-section">
+      <div class="comment-box-section">
         {{#each comments}}
           {{>singlecommentbox}}
         {{/each}}
-      </section>
+      </div>
     </core-header-panel>
     <div class="comment-box-bottom">
       <paper-input class="comment-box-input" label="Escribir un comentario…"></paper-input>
