@@ -5,12 +5,12 @@ html, body {
 /*** Other stuff ***/
 
 core-scaffold .core-header-panel {
-  background: #34495d;
+  background: #34495e;
   height: 100%;
 }
 
 core-scaffold::shadow core-toolbar {
-  background: #34495d;
+  background: #34495e;
   height: 128px;
 }
 
@@ -29,7 +29,7 @@ core-scaffold::shadow #menuButton {
 core-scaffold .core-toolbar{
   position: absolute;
   width: 100%;
-  background: #34495d;
+  background: #34495e;
 }
 
 core-scaffold .top-header {
@@ -89,7 +89,7 @@ core-scaffold .paper-tabs {
 core-scaffold paper-tabs {
   width: 100%;
   font-weight: 100;
-  background: #39516b;
+  background: #2c3e50;
   border-bottom: 1px solid #3f556e;
   font-family: 'Roboto','Helvetica', sans-serif;
 }
@@ -100,7 +100,7 @@ core-scaffold paper-tab::shadow #ink {
 }
 
 core-scaffold paper-tabs::shadow #selectionBar {
-  background-color: #eeeeee;
+  background-color: white;
   height: 4px;
 }
 
@@ -108,7 +108,7 @@ core-scaffold paper-tabs::shadow #selectionBar {
 /** Login **/
 
 #login-buttons {
-  background: #3a516a;
+  background: #2c3e50;
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 300;
 }
@@ -126,7 +126,7 @@ core-scaffold paper-tabs::shadow #selectionBar {
   flex-direction: column;
   justify-content: flex-end;
   padding: 15px;
-  color: white;
+  color: #ececec;
 }
 .login-form input {
   border-radius: 3px;
@@ -151,7 +151,7 @@ core-scaffold paper-tabs::shadow #selectionBar {
   border-radius: 5px;
   margin-top: 5px;
   padding: 5px;
-  color: #f4f5f7;
+  color: #ececec;
   cursor: pointer;
   font-weight: 300;
 }
@@ -161,11 +161,11 @@ core-scaffold paper-tabs::shadow #selectionBar {
 }
 
 .additional-link-container a {
-  color: #ffffff;
+  color: #9ea4a8;
   cursor: pointer;
 }
 
 .additional-link-container a:hover {
-  color: #a8b3be;
+  color: #9ea4a8;
   text-decoration: none;
 }
