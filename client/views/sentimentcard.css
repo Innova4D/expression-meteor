@@ -38,6 +38,17 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.sentiment-card-data-source {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: white;
+  opacity: 0.65;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 11px;
+}
+
 .sentiment-card .action-bar {
   display: flex;
   align-items: center;

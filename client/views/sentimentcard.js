@@ -19,9 +19,9 @@ Template.sentimentcard.events({
       template.$('.action-bar').css("background-color", "#ce4a5c"); //Negative
       template.$('.share-card').css("background-color", "#b84353"); //Negative
     } else if (this.avgSen == 0) {
-      template.$('.action-bar').css("background", "#dcaa45"); //Neutral
+      template.$('.action-bar').css("background-color", "#dcaa45"); //Neutral
     } else if (this.avgSen > 0) {
-      template.$('.action-bar').css("background", "#30ad63"); //Positive
+      template.$('.action-bar').css("background-color", "#30ad63"); //Positive
     }
     template.$('.share-card-fa').removeClass("fa-share-alt").addClass("fa-times");
     template.$('.share-card').removeClass("share-card").addClass("dismiss-share-card");
@@ -51,19 +51,22 @@ Template.sentimentcard.events({
 */
 Template.sentimentcard.helpers({
   commentcounter: function() {
-    return Comments.find({ topic: this._id }).count();
+    return this.total;
   },
   sentimentavg: function() {
-    console.log(this.avgSen);
     var m = [];
-    m[0] = Comments.find({topic: this._id, sentiment: -2}).count();
-    m[1] = Comments.find({topic: this._id, sentiment: -1}).count();
-    m[2] = Comments.find({topic: this._id, sentiment:  0}).count();
-    m[3] = Comments.find({topic: this._id, sentiment:  1}).count();
-    m[4] = Comments.find({topic: this._id, sentiment:  2}).count();
+    m[0] = this.bars.terrible;
+    m[1] = this.bars.bad;
+    m[2] = this.bars.neutral;
+    m[3] = this.bars.good;
+    m[4] = this.bars.excellent;
     maxValue = Math.max.apply(this, m);
     Session.set("card-avg",$.inArray(maxValue,m));
     return $.inArray(maxValue,m);
+  },
+  dataSource: function() {
+    if(this.creator == "ReactiveTwitter")
+    return "Live from Twitter";
   }
 });
 
@@ -71,7 +74,6 @@ Template.sentimentcard.helpers({
 * When the card renders, do this:
 */
 Template.sentimentcard.rendered = function () {
-
   var self = this;
   function animateCardBackground(bar) {
 

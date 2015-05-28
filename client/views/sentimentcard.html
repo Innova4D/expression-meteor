@@ -5,6 +5,7 @@
     <div class="flipper">
       <div class="sentiment-card-front">
         <!-- front content -->
+        <div class="sentiment-card-data-source">{{dataSource}}</div>
         {{>sentimentmap}}
         {{>commentsribbon}}
         <div class="card-title card-title-front stopselect">{{name}}
@@ -13,6 +14,7 @@
       </div>
       <div class="sentiment-card-back">
         <!-- back content -->
+        <div class="sentiment-card-data-source">{{dataSource}}</div>
         {{>sentimentbars}}
         {{>keywordsribbon}}
         <div class="card-title card-title-back stopselect">{{name}}

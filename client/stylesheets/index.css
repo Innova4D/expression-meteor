@@ -11,7 +11,7 @@ core-scaffold .core-header-panel {
 
 core-scaffold::shadow core-toolbar {
   background: #34495e;
-  height: 128px;
+  height: 110px;
 }
 
 core-scaffold::shadow core-header-panel {
@@ -80,7 +80,7 @@ core-scaffold .header-title {
 
 core-scaffold .paper-tabs {
   position: absolute;
-  bottom: 0px;
+  bottom: 18px;
   left: -16px;
   color: white;
   width: 100%;
@@ -133,7 +133,7 @@ core-scaffold paper-tabs::shadow #selectionBar {
   border: 1px solid #37336b;
   background: white;
   color: black;
-  padding: 3px;
+  padding: 2px;
   margin: 2px;
 }
 
