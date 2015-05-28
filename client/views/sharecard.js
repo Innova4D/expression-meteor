@@ -35,7 +35,7 @@ Template.sharecard.rendered = function () {
         actioncard.css('background-color', '#39cb74');
         break;
         case 4: //verypositive
-        actioncard.css('background-color', '#37ac65');
+        actioncard.css('background-color', '#39cb74');
         break;
       }
     }
