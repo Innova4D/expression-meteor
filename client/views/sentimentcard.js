@@ -65,8 +65,7 @@ Template.sentimentcard.helpers({
     return position;
   },
   dataSource: function() {
-    if(this.creator == "ReactiveTwitter")
-    return "Live from Twitter";
+    return this.creator;
   }
 });
 

@@ -21,7 +21,32 @@
 <body>
   <core-scaffold fit>
     <core-header-panel navigation mode="seamed" class="core-header-panel stopselect">
+
       {{> loginButtons}}
+
+      {{#if currentUser}}
+        {{currentUser.profile.login}}
+      {{/if}}
+
+      <div class="welcome-expression">
+        {{#unless currentUser}}
+        <div class="expression-description">
+          <p>
+            Bienvenido a la comunidad para compartir anónimamente ideas, críticas y
+            opiniones.
+          </p>
+          <p>
+            Expression utiliza un poderoso sistema de
+            análisis de opinión para distinguir entre comentarios positivos y negativos.
+          </p>
+          <p>
+            Éstos datos son útiles para conocer las virtudes y carencias
+            de productos ó servicios. ¡Exprésate! ¿Tú qué opinas? Intégrate a la
+            comunidad para comenzar a conversar.
+          </p>
+        </div>
+        {{/unless}}
+      </div>
     </core-header-panel>
     <core-toolbar class="core-toolbar medium-tall" tool>
       <div class="header-title stopselect">Expression</div>

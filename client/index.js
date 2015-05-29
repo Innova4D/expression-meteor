@@ -52,11 +52,11 @@ Template.commentbox.helpers({
     return Comments.find({topic: oid});
   }
 });
-
-
-Template.loginButtons.rendered = function(){
-    Accounts._loginButtonsSession.set('dropdownVisible', true);
-};
+// 
+//
+// Template.loginButtons.rendered = function(){
+//     Accounts._loginButtonsSession.set('dropdownVisible', true);
+// };
 
 Template.commentbox.events({
   'click .close-comment-box': function (event,template) {

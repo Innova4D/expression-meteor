@@ -108,26 +108,21 @@ core-scaffold paper-tabs::shadow #selectionBar {
 /** Login **/
 
 #login-buttons {
-  background: #2c3e50;
+  position: relative;
+  margin: 10px;
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 300;
-}
-
-.login-link-text {
-  display: none;
-}
-
-.login-close-text {
-  display: none;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 15px;
   color: #ececec;
+  font-weight: 300;
+  margin-top: 15px;
 }
+
 .login-form input {
   border-radius: 3px;
   border: 1px solid #37336b;
@@ -139,21 +134,68 @@ core-scaffold paper-tabs::shadow #selectionBar {
 
 #login-email-label-and-input {
   align-self: flex-end;
+  margin-top: 5px;
 }
 
 #login-password-label-and-input {
   align-self: flex-end;
+  margin-top: 5px;
 }
 
-.login-button-form-submit {
+.accounts-dialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 5px;
+  color: #ececec;
+}
+
+.login-button {
   align-self: flex-end;
   border: 1px solid #afb9c4;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
   padding: 5px;
   color: #ececec;
   cursor: pointer;
   font-weight: 300;
+}
+
+.login-link-text {
+  align-self: flex-end;
+  border: 1px solid #afb9c4;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 5px;
+  color: #ececec;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+.login-link-text:hover {
+  color: #ececec;
+}
+
+.login-close-text {
+  position: absolute;
+  right: 0;
+  top: -20px;
+  /*align-self: flex-end;*/
+  border: 1px solid #d0495a;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 5px;
+  color: #ce4a5c;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+#forgot-password-email-label-and-input {
+  align-self: flex-end;
+}
+
+.login-close-text:hover {
+  color: #ce4a5c;
 }
 
 .error-message {
@@ -168,4 +210,14 @@ core-scaffold paper-tabs::shadow #selectionBar {
 .additional-link-container a:hover {
   color: #9ea4a8;
   text-decoration: none;
+}
+
+/*** Sidebar ***/
+
+.expression-description {
+  padding: 10px;
+  color: rgba(225, 225, 225, 0.75);
+  font-size: 12px;
+  font-family: Roboto,Helvetica, sans-serif;
+  font-weight: 300;
 }
