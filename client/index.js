@@ -36,27 +36,29 @@ Template.sentimentmap.onCreated(function() {
   });
 });
 
-
-
-
 Template.body.helpers({
   topics: function () {
     return Topics.find({});
   }
 });
 
-
 Template.commentbox.helpers({
   comments: function () {
-    var oid = this.id;
-    return Comments.find({topic: oid});
+    if(Session.get("showPositives")) {
+      console.log("Positive-query");
+      return Comments.find({topic: this.id, sentiment: { $gt: 0, $lt: 3 }});
+    } else if (Session.get("showNeutrals")) {
+      console.log("neutral-query");
+      return Comments.find({topic: this.id, sentiment: 0});
+    } else if (Session.get("showNegatives")){
+      console.log("negative-query");
+      return Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }});
+    } else {
+      console.log("all-query");
+      return Comments.find({topic: this.id}, {sort: {posted:-1}});
+    }
   }
 });
-// 
-//
-// Template.loginButtons.rendered = function(){
-//     Accounts._loginButtonsSession.set('dropdownVisible', true);
-// };
 
 Template.commentbox.events({
   'click .close-comment-box': function (event,template) {
@@ -66,13 +68,6 @@ Template.commentbox.events({
     });
   }
 });
-
-Template.singlecommentbox.helpers({
-  sentiment: function () {
-    // return this.sentiment;
-  }
-});
-
 
 Template.singlecommentbox.rendered = function(){
   switch (this.data.sentiment) {

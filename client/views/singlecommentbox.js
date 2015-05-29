@@ -13,11 +13,13 @@ Template.sharecard.events({});
 */
 Template.singlecommentbox.helpers({
   text: function(){
-    console.log(this);
     return this.text;
   },
   keywords: function() {
     return this.keywords;
+  },
+  sentiment: function () {
+    return "";//this.sentiment;
   }
 });
 
