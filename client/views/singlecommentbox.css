@@ -56,19 +56,19 @@
 
 .comment-box-keywords-container {
   flex-flow: row;
-  display: flex;
+  display:  flex;
   flex-direction: row;
 }
 .comment-box-keywords-title {
   display: inline;
+  color:  #727980;
+  font-size: 10px;
   text-decoration: none;
-  color: #727980;
-  font-size: 10px;;
 }
 .comment-box-keywords {
   display: inline;
-  text-decoration: underline;
   color: #727980;
-  font-size: 10px;
   cursor: pointer;
+  font-size: 10px;
+  text-decoration: underline;
 }
