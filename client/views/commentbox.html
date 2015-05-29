@@ -3,13 +3,22 @@
   <div class="comment-box animated fadeIn">
     <core-header-panel class="comment-box-core-header-panel">
       <core-toolbar class="comment-box-toolbar">
-        <paper-fab icon="close" class="close-comment-box"></paper-fab>
-        <h1  class="comment-box-title">{{name}}</h1>
-        <div class="commentbox-sentiment-dot"></div>
+
+          <paper-fab icon="close" class="close-comment-box"></paper-fab>
+          <h1  class="comment-box-title">{{name}}</h1>
+          <div class="commentbox-sentiment-dot"></div>
+        
+        <paper-radio-group class="blue" selected="all">
+          <paper-radio-button name="all"    label="All"></paper-radio-button>
+          <paper-radio-button name="small"  label="Positive"></paper-radio-button>
+          <paper-radio-button name="medium" label="Neutral"></paper-radio-button>
+          <paper-radio-button name="large"  label="Negative"></paper-radio-button>
+        </paper-radio-group>
+
       </core-toolbar>
       <div class="comment-box-section">
         {{#each comments}}
-          {{>singlecommentbox}}
+        {{>singlecommentbox}}
         {{/each}}
       </div>
     </core-header-panel>

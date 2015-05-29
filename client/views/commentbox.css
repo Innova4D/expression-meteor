@@ -14,7 +14,7 @@
 .comment-box .comment-box-toolbar{
   background: #34495c;
   border-bottom: 8px solid #3a516a;
-  height: 110px;
+  height: 140px;
   padding: 15px;
 }
 
@@ -87,4 +87,24 @@
   bottom: 25px;
   align-self: flex-end;
   justify-content: center;
+}
+
+
+paper-radio-group.blue paper-radio-button::shadow #ink[checked] {
+  color: #4285f4;
+}
+
+paper-radio-group.blue paper-radio-button::shadow #onRadio {
+  background-color: #4285f4;
+}
+
+paper-radio-group.blue paper-radio-button[checked]::shadow #offRadio {
+  border-color: #4285f4;
+}
+
+paper-radio-button::shadow #radioLabel {
+  font-family: roboto, Helvetica, sans-serif;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
 }
