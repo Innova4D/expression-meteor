@@ -1,7 +1,7 @@
 /*
- * Comment-box CSS Template Definition.
- *
- */
+* Comment-box CSS Template Definition.
+*
+*/
 .comment-box {
   top: 0;
   position: absolute;
@@ -89,22 +89,28 @@
   justify-content: center;
 }
 
+/** Radio Buttons **/
+paper-radio-button.blue::shadow   #onRadio { background-color: #4285f4; }
+paper-radio-button.green::shadow  #onRadio { background-color: #29b872; }
+paper-radio-button.yellow::shadow #onRadio { background-color: #f9bd3e; }
+paper-radio-button.red::shadow    #onRadio { background-color: #e35a6d; }
 
-paper-radio-group.blue paper-radio-button::shadow #ink[checked] {
-  color: #4285f4;
-}
+paper-radio-button[checked].blue::shadow   #offRadio { border-color: #4285f4; }
+paper-radio-button[checked].green::shadow  #offRadio { border-color: #29b872; }
+paper-radio-button[checked].yellow::shadow #offRadio { border-color: #f9bd3e; }
+paper-radio-button[checked].red::shadow    #offRadio { border-color: #e35a6d; }
+paper-radio-button::shadow #offRadio { border-color: #8b95a0; }
 
-paper-radio-group.blue paper-radio-button::shadow #onRadio {
-  background-color: #4285f4;
-}
 
-paper-radio-group.blue paper-radio-button[checked]::shadow #offRadio {
-  border-color: #4285f4;
-}
+paper-radio-button.blue::shadow   #ink { color: #4285f4; }
+paper-radio-button.green::shadow  #ink { color: #29b872; }
+paper-radio-button.yellow::shadow #ink { color: #f9bd3e; }
+paper-radio-button.red::shadow    #ink { color: #e35a6d; }
 
 paper-radio-button::shadow #radioLabel {
   font-family: roboto, Helvetica, sans-serif;
-  color: white;
-  font-size: 14px;
+  color: #a7afb7;
+  font-size: 13px;
   font-weight: 300;
+  cursor: pointer;
 }
