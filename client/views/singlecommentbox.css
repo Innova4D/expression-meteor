@@ -23,13 +23,20 @@
   max-height:50px;
   margin: 5px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .user-comment {
-  margin: 5px;
+  margin: 6px;
   color: #3c4045;
   width: auto;
   flex-grow: 2;
+}
+
+.user-comment p{
+  padding: 0px;
+  margin:  0px;
+  text-align: justify;
 }
 
 .user-sentiment {
@@ -45,4 +52,23 @@
 
 .singlecommentbox:nth-child(odd) {
     background: #f6f7f8;
+}
+
+.comment-box-keywords-container {
+  flex-flow: row;
+  display: flex;
+  flex-direction: row;
+}
+.comment-box-keywords-title {
+  display: inline;
+  text-decoration: none;
+  color: #727980;
+  font-size: 10px;;
+}
+.comment-box-keywords {
+  display: inline;
+  text-decoration: underline;
+  color: #727980;
+  font-size: 10px;
+  cursor: pointer;
 }

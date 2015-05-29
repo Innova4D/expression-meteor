@@ -38,6 +38,7 @@
   color: white;
   font-size: 28px;
   font-weight: 100;
+  cursor: pointer;
 }
 
 .comment-box .commentbox-sentiment-dot {
@@ -107,6 +108,7 @@ paper-radio-button.green::shadow  #ink { color: #29b872; }
 paper-radio-button.yellow::shadow #ink { color: #f9bd3e; }
 paper-radio-button.red::shadow    #ink { color: #e35a6d; }
 
+paper-radio-button[checked]::shadow #radioLabel { color: #ffffff; }
 paper-radio-button::shadow #radioLabel {
   font-family: roboto, Helvetica, sans-serif;
   color: #a7afb7;

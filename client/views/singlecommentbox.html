@@ -1,7 +1,16 @@
 <template name="singlecommentbox">
-  <div class="singlecommentbox">
+  <div class="singlecommentbox stopselect">
     <div class="user-photo"><img src="http://placehold.it/50&text=user"/></div>
-    <div class="user-comment">{{text}}</div>
+    <div class="user-comment stopselect"><p>{{text}}</p>
+      <div class="comment-box-keywords-container">
+        <div class="comment-box-keywords-title">
+          Keywords:&nbsp;
+        </div>
+        <div class="comment-box-keywords">
+          {{keywords}}
+        </div>
+      </div>
+    </div>
     <div class="user-sentiment">{{sentiment}}</div>
   </div>
 </template>
