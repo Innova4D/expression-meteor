@@ -21,9 +21,13 @@
 <body>
   <core-scaffold fit>
     <core-header-panel navigation mode="seamed" class="core-header-panel stopselect">
-
+      {{#if currentUser}}
+      <div class="user-profile">
+        <div class="user-photo-account"></div>
+        <div class="user-name-account">Francisco Gutiérrez</div>
+      </div>
+      {{/if}}
       {{> loginButtons}}
-
       {{#if currentUser}}
         {{currentUser.profile.login}}
       {{/if}}

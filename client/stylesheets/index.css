@@ -112,6 +112,11 @@ core-scaffold paper-tabs::shadow #selectionBar {
   margin: 10px;
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 300;
+
+  /*display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;*/
 }
 
 .login-form {
@@ -210,6 +215,30 @@ core-scaffold paper-tabs::shadow #selectionBar {
 .additional-link-container a:hover {
   color: #9ea4a8;
   text-decoration: none;
+}
+
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-photo-account {
+  background-image: url("images/user1.png");
+  background-size: cover;
+  width:  100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 8px;
+  /*box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
+}
+
+.user-name-account {
+  color: #ececec;
+  font-weight: 100;
+  font-size:  22px;
+  opacity: 0.85;
 }
 
 /*** Sidebar ***/
