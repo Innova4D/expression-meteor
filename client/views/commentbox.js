@@ -1,37 +1,37 @@
 Template.commentbox.events({
   "change .showPositives": function (event) {
-    Session.set("showPositives", event.target.checked);
+    Session.set("filter-comments",0);
   },
   "change .showNeutrals": function (event) {
-    Session.set("showNeutrals", event.target.checked);
+    Session.set("filter-comments",1);
+    Session.set("showNeutrals", {checked : event.target.checked, changed: event.timestamp});
   },
   "change .showNegatives": function (event) {
-    Session.set("showNegatives", event.target.checked);
+    Session.set("filter-comments",2);
   },
   "change .showAll": function (event) {
-    Session.set("showAll", event.target.checked);
+    Session.set("filter-comments",3);
   }
 });
 
 Template.commentbox.helpers({
   comments: function () {
-    if(Session.get("showPositives")) {
+    switch(Session.get("filter-comments")) {
+      case 0: //Positives
       return Comments.find({topic: this.id, sentiment: { $gt: 0, $lt: 3 }});
-    } else if (Session.get("showNeutrals")) {
+      break;
+      case 1: //Neutrals
       return Comments.find({topic: this.id, sentiment: 0});
-    } else if (Session.get("showNegatives")){
+      break;
+      case 2: //Negatives
       return Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }});
-    } else {
+      break;
+      case 3: //All
       return Comments.find({topic: this.id}, {sort: {posted:-1}});
+      break;
+      default:
+      return Comments.find({topic: this.id}, {sort: {posted:-1}});
+      break;
     }
-  },
-  showPositives: function () {
-    return Session.set("showPositives", false);
-  },
-  showNegatives: function() {
-    return Session.set("showNegatives", false);
-  },
-  showNeutrals: function() {
-    return Session.set("showNeutrals", false);
   }
 });
