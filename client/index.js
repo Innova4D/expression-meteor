@@ -6,6 +6,13 @@ Meteor.subscribe("comments");
 
 Meteor.startup(function() {
   GoogleMaps.load();
+
+  Tracker.autorun(function () {
+    var geo = Geolocation.currentLocation();
+    if(geo) {
+      Session.set("geo",{lat:geo.coords.latitude, long:geo.coords.longitude});
+    }
+  });
 });
 
 Template.sentimentmap.helpers({
@@ -39,24 +46,6 @@ Template.sentimentmap.onCreated(function() {
 Template.body.helpers({
   topics: function () {
     return Topics.find({});
-  }
-});
-
-Template.commentbox.helpers({
-  comments: function () {
-    if(Session.get("showPositives")) {
-      console.log("Positive-query");
-      return Comments.find({topic: this.id, sentiment: { $gt: 0, $lt: 3 }});
-    } else if (Session.get("showNeutrals")) {
-      console.log("neutral-query");
-      return Comments.find({topic: this.id, sentiment: 0});
-    } else if (Session.get("showNegatives")){
-      console.log("negative-query");
-      return Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }});
-    } else {
-      console.log("all-query");
-      return Comments.find({topic: this.id}, {sort: {posted:-1}});
-    }
   }
 });
 
@@ -97,12 +86,12 @@ Template.singlecommentbox.rendered = function(){
 
 Template.commentbox.events({
   "click .comment-box-send": function (event, template) {
-    var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
+    // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
     Comments.insert({
       topic: this.id,
       // author: null,
       posted: new Date(),
-      loc: {lng: 98.91, lat: 110.23},
+      loc: Session.get('geo'),
       sentiment: null,
       keywords: null,
       text: template.$(".comment-box-input").val(),
@@ -117,14 +106,13 @@ Template.commentbox.events({
   },
 
   "keypress paper-input": function (event, template) {
-    var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
-
+    // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
     if (event.charCode == 13) {
       Comments.insert({
         topic: this.id,
         // author: null,
         posted: new Date(),
-        loc: {lng: 98.91, lat: 110.23},
+        loc: Session.get('geo'),
         sentiment: null,
         keywords: null,
         text: template.$(".comment-box-input").val(),

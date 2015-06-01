@@ -77,17 +77,14 @@
 }
 
 .comment-box .comment-box-input{
-  flex: 3 0 0;
-  width: 75%;
-  margin: 5px;
-  padding-left: 20px;
+  width: 100%;
+  padding: 15px;
 }
 
 .comment-box .comment-box-send{
   position: absolute;
-  bottom: 25px;
-  align-self: flex-end;
-  justify-content: center;
+  right: 20px;
+  top: -25px;
 }
 
 /** Radio Buttons **/

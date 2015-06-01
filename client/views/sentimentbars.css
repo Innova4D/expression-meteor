@@ -9,7 +9,6 @@
   position: absolute;
   top: 35px;
   right: 20px;
-  /*background: #1b80c6;*/
   background: #3498db;
 }
 
@@ -32,12 +31,6 @@
   transition: height 1s;
   border-radius: 2px 2px 0px 0px;
   box-shadow: 0px 0px 3px 0px rgba(23, 23, 23, 0.45);
-  /*
-  margin-left: 12px;
-  -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.45);
-  */
 }
 .sentimentbar .emoticon {
   font-weight: 100;
