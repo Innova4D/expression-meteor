@@ -27,6 +27,7 @@
 .sentiment-card .card-title {
   padding: 5px;
   opacity: 1;
+  filter: alpha(opacity=100);
   width:  100%;
   font-size: 27px;
   font-weight: 100;
@@ -44,14 +45,21 @@
   top: 10px;
   color: white;
   opacity: 0.85;
+  filter: alpha(opacity=85);
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 11px;
 }
 
 .sentiment-card .action-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 auto;
   /*background: #26ae60;*/
   width: 320px;
@@ -90,6 +98,7 @@
   display: inline;
   color: white;
   opacity: 0.65;
+  filter: alpha(opacity=65);
   font-family: 'Roboto','Helvetica', sans-serif;
   font-weight: 100;
 }
@@ -111,24 +120,29 @@ box-shadow: 0px;
 
 /* entire container, keeps perspective */
 .flip-container {
-  perspective: 1000;
+  -webkit-perspective: 1000;
+          perspective: 1000;
 }
 /* flip the pane when hovered */
 /*.flip-container:hover .flipper, .flip-container.flip .flipper {*/
 .flip-container.flip .flipper {
-  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 /* flip speed goes here */
 .flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
+  -webkit-transition: 0.6s;
+          transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
   position: relative;
 }
 
 /* hide back of pane during swap */
 .sentiment-card-front, .sentiment-card-back {
-  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
   position: absolute;
   top:  0;
   left: 0;
@@ -151,13 +165,26 @@ box-shadow: 0px;
   -webkit-transform: rotateY(0deg);
 
   /** Flex positioning **/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 
   /** Safari **/
-  -webkit-display: flex;
+  -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
   -webkit-flex-direction: column;
   -webkit-align-items: center;
   -webkit-justify-content: flex-end;
@@ -167,10 +194,23 @@ box-shadow: 0px;
 .sentiment-card-back {
   transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 paper-ripple {

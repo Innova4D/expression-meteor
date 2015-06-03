@@ -4,6 +4,7 @@
   font-weight: 300;
   font-family: roboto, helvetica;
   opacity: 0.9;
+  filter: alpha(opacity=90);
   background: none;
   border-radius: 5px;
   border: 1px solid rgba(255,255,255,0.45);
@@ -14,8 +15,17 @@
 }
 
 .keyword-container{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 

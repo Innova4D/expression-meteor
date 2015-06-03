@@ -18,6 +18,7 @@ core-scaffold::shadow core-toolbar {
 core-scaffold::shadow core-header-panel {
   color: black;
   width: 100%;
+  background: white;
 }
 
 core-scaffold::shadow #menuButton {
@@ -48,15 +49,27 @@ core-scaffold .search-header {
 }
 
 core-scaffold .sentiment-cards-section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: white;
 }
 
 ::content > * {
-   margin: 0;
+  margin: 0;
 }
 
 core-scaffold .header-title {
@@ -121,8 +134,18 @@ core-scaffold paper-tabs::shadow #selectionBar {
 }
 
 .login-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   color: #ececec;
   font-weight: 300;
@@ -139,24 +162,40 @@ core-scaffold paper-tabs::shadow #selectionBar {
 }
 
 #login-email-label-and-input {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
   margin-top: 5px;
 }
 
 #login-password-label-and-input {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
   margin-top: 5px;
 }
 
 .accounts-dialog {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 5px;
   color: #ececec;
 }
 
 .login-button {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
   border: 1px solid #afb9c4;
   border-radius: 5px;
@@ -168,6 +207,8 @@ core-scaffold paper-tabs::shadow #selectionBar {
 }
 
 .login-link-text {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
   border: 1px solid #afb9c4;
   border-radius: 5px;
@@ -197,6 +238,8 @@ core-scaffold paper-tabs::shadow #selectionBar {
 }
 
 #forgot-password-email-label-and-input {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
   align-self: flex-end;
 }
 
@@ -219,9 +262,22 @@ core-scaffold paper-tabs::shadow #selectionBar {
 }
 
 .user-profile {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -240,6 +296,7 @@ core-scaffold paper-tabs::shadow #selectionBar {
   font-weight: 100;
   font-size:  22px;
   opacity: 0.85;
+  filter: alpha(opacity=85);
 }
 
 /*** Sidebar ***/
