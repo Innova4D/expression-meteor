@@ -28,10 +28,6 @@
         <div class="user-name-account">Francisco Gutiérrez</div>
       </div>
       {{/if}}
-      {{> loginButtons}}
-      {{#if currentUser}}
-      {{currentUser.profile.login}}
-      {{/if}}
       <div class="welcome-expression">
         {{#unless currentUser}}
         <div class="expression-description">
@@ -51,6 +47,10 @@
       <div class="top">
         <div class="header-title stopselect">Expression</div>
         <paper-icon-button icon="search" class="search-header"></paper-icon-button>
+        {{> loginButtons}}
+        {{#if currentUser}}
+        {{currentUser.profile.login}}
+        {{/if}}
       </div>
       <div class="bottom">
         <paper-tabs class="paper-tabs" selected="1" role="tablist">

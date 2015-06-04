@@ -7,8 +7,9 @@ html, body {
 /* Using Shadow to chrome, non-using for safari (weird shim-shadowdom bug with meteor) **/
 
 core-scaffold .core-header-panel {
-  background: #eeeeee;
+  background: white;
   height: 100%;
+  z-index: 100000000000000;
 }
 
 core-scaffold .core-header-panel #section {
@@ -23,7 +24,7 @@ core-scaffold core-header-panel {  background: white; }
 
 core-scaffold core-toolbar #bottomBar{
   width: 100%;
-  background: #55626f;
+  background: white;
   padding: 0px;
   margin: 0px;
 }
@@ -62,7 +63,7 @@ core-scaffold .sentiment-cards-section {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #eee;
+  background: #ececec;
   height: 1000px;
 }
 
@@ -103,7 +104,7 @@ core-scaffold paper-tabs {
   width: 100%;
   font-weight: 400;
   background: white;
-  /*border-bottom: 1px solid white;*/
+  border-bottom: 1px solid #f0f0f0;
   font-family: 'Roboto','Helvetica', sans-serif;
   color: black;
 }
@@ -118,10 +119,21 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
 /** Login **/
 
 #login-buttons {
-  position: relative;
-  margin: 10px;
+  position: absolute;
+  background: white;
   font-family: Roboto, Helvetica, sans-serif;
+  font-size: 14px;
   font-weight: 300;
+  z-index: 10;
+  /*border-radius: 5px;*/
+  display: inline;
+  right: 30px;
+  top: -40px;
+}
+
+.accounts-dialog {
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.25);
+  /*border-radius:5px;*/
 }
 
 .login-form {
@@ -138,16 +150,16 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
   -webkit-justify-content: flex-end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  color: #ececec;
+  color: #424242;
   font-weight: 300;
-  margin-top: 15px;
+  border-radius: 5px;
 }
 
 .login-form input {
   border-radius: 3px;
   border: 1px solid #37336b;
   background: white;
-  color: black;
+  color: #424242;
   padding: 2px;
   margin: 2px;
 }
@@ -181,7 +193,7 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
   -ms-flex-pack: end;
   justify-content: flex-end;
   padding: 5px;
-  color: #ececec;
+  color: #424242;
 }
 
 .login-button {
@@ -192,7 +204,7 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
   border-radius: 5px;
   margin-top: 10px;
   padding: 5px;
-  color: #ececec;
+  color: #424242;
   cursor: pointer;
   font-weight: 300;
 }
@@ -205,13 +217,14 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
   border-radius: 5px;
   margin-top: 15px;
   padding: 5px;
-  color: #ececec;
+  color: #424242;
   cursor: pointer;
   font-weight: 300;
+  background: white;
 }
 
 .login-link-text:hover {
-  color: #ececec;
+  color: #424242;
 }
 
 .login-close-text {
@@ -223,9 +236,10 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
   border-radius: 5px;
   margin-top: 15px;
   padding: 5px;
-  color: #ce4a5c;
+  color: #424242;
   cursor: pointer;
   font-weight: 300;
+  background: white;
 }
 
 #forgot-password-email-label-and-input {
@@ -235,15 +249,15 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
 }
 
 .login-close-text:hover {
-  color: #ce4a5c;
+  color: #424242;
 }
 
 .error-message {
-  color: #ce4a5c;
+  color: #424242;
 }
 
 .additional-link-container a {
-  color: #9ea4a8;
+  color: #424242;
   cursor: pointer;
 }
 
@@ -293,7 +307,7 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
 
 .expression-description {
   padding: 10px;
-  color: rgba(225, 225, 225, 0.75);
+  color: #424242;
   font-size: 12px;
   font-family: Roboto,Helvetica, sans-serif;
   font-weight: 300;
