@@ -12,6 +12,7 @@ Template.sentimentcard.events({
   'click .comment-card': function (event,template) {
     var avg = parseInt(template.$('.avg-sentiment').text());
     Blaze.renderWithData(Template.commentbox, {id: this._id, name: this.name, avgsentiment: avg}, $("body")[0]);
+    Session.set("filter-comments",3);
   },
   'click .share-card': function (event,template) {
     var avg = parseInt(template.$('.avg-sentiment').text());
