@@ -7,16 +7,16 @@ html, body {
 /* Using Shadow to chrome, non-using for safari (weird shim-shadowdom bug with meteor) **/
 
 core-scaffold .core-header-panel {
-  background: #55626f;
+  background: #eeeeee;
   height: 100%;
 }
 
 core-scaffold .core-header-panel #section {
-  background: white !important;
+  background: #eeeeee !important;
 }
 
-core-scaffold::shadow core-toolbar { background: #55626f; }
-core-scaffold core-toolbar { background: #55626f; }
+core-scaffold::shadow core-toolbar { background: white; }
+core-scaffold core-toolbar { background: white; }
 
 core-scaffold::shadow core-header-panel {  background: white; }
 core-scaffold core-header-panel {  background: white; }
@@ -29,7 +29,7 @@ core-scaffold core-toolbar #bottomBar{
 }
 
 core-scaffold::shadow #mainContainer {
-  background: white;
+  background: #eeeeee;
   height: 100%;
 }
 
@@ -39,13 +39,11 @@ core-scaffold .core-toolbar{
   background: #80e3ea;
 }
 
-core-scaffold .search-header {
-  color: white;
-}
+core-scaffold .search-header { color: #424242; }
+core-scaffold::shadow .search-header { color: #424242; }
 
-core-scaffold::shadow .search-header {
-  color: white;
-}
+core-scaffold #menuButton { color: #424242; }
+core-scaffold::shadow #menuButton { color: #424242; }
 
 core-scaffold .sentiment-cards-section {
   display: -webkit-box;
@@ -64,7 +62,8 @@ core-scaffold .sentiment-cards-section {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: white;
+  background: #eee;
+  height: 1000px;
 }
 
 ::content > * {
@@ -73,13 +72,13 @@ core-scaffold .sentiment-cards-section {
 
 core-scaffold .header-title {
   font-weight: 100;
-  font-family: 'Kaushan Script', cursive;
-  font-size: 46px;
+  font-family: 'Roboto','Helvetica', sans-serif;
+  font-size: 42px;
   text-overflow: ellipsis;
   cursor: pointer;
   width: 100%;
-  color: white;
-  padding: 20px;
+  color: #424242;
+  padding: 15px;
   display: inline;
 }
 
@@ -96,23 +95,24 @@ core-scaffold .paper-tabs {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  color: white;
+  color: black;
   width: 100%;
 }
 
 core-scaffold paper-tabs {
   width: 100%;
   font-weight: 400;
-  background: #54cdc4;
-  border-bottom: 1px solid #8ad8d5;
+  background: white;
+  /*border-bottom: 1px solid white;*/
   font-family: 'Roboto','Helvetica', sans-serif;
+  color: black;
 }
 
-core-scaffold paper-tab #ink { color: white; cursor: pointer; }
-core-scaffold paper-tab::shadow #ink { color: white; cursor: pointer; }
+core-scaffold paper-tab #ink { color: #fec88b; cursor: pointer; }
+core-scaffold paper-tab::shadow #ink { color: #fec88b; cursor: pointer; }
 
-core-scaffold paper-tabs #selectionBar { background-color: #c8f26d;  height: 4px; }
-core-scaffold paper-tabs::shadow #selectionBar { background-color: #c8f26d;  height: 4px; }
+core-scaffold paper-tabs #selectionBar { background-color: #fd9826;  height: 4px; }
+core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  height: 4px; }
 
 
 /** Login **/
@@ -122,11 +122,6 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #c8f26d;  hei
   margin: 10px;
   font-family: Roboto, Helvetica, sans-serif;
   font-weight: 300;
-
-  /*display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;*/
 }
 
 .login-form {
