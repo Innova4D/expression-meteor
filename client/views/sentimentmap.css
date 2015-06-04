@@ -1,15 +1,30 @@
 .sentiment-map {
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
+  -khtml-border-radius: 50%;
   width: 160px;
   height:160px;
   box-shadow: inset 0px 0px 4px 0px rgba(30,30,30,.55);
   margin-bottom: 15px;
   cursor: pointer;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .map-canvas {
-  z-index: -1000;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
+  -khtml-border-radius: 50%;
   width: 160px;
   height:160px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  -webkit-transform: translate3d(0,0,0);
+  z-index: -10000000;
+
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }

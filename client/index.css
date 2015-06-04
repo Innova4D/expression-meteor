@@ -10,22 +10,19 @@ core-scaffold .core-header-panel {
   height: 100%;
 }
 
-core-scaffold::shadow core-toolbar {
-  background: #34495e;
-  height: 110px;
-}
+core-scaffold::shadow core-toolbar { background: #2b3d4f; }
+core-scaffold core-toolbar { background: #2b3d4f; }
 
-core-scaffold::shadow core-header-panel {
-  color: black;
-  width: 100%;
+core-scaffold::shadow core-header-panel {  background: white; }
+core-scaffold core-header-panel {  background: white; }
+
+core-scaffold::shadow #mainContainer {
   background: white;
+  height: 100%;
 }
 
-core-scaffold::shadow #menuButton {
-  top: 10px;
-  left:0px;
-  z-index: 1;
-  position: absolute;
+core-scaffold::shadow #topBar {
+  background: #35495d;
 }
 
 core-scaffold .core-toolbar{
@@ -34,18 +31,12 @@ core-scaffold .core-toolbar{
   background: #34495e;
 }
 
-core-scaffold .top-header {
-  top: 0;
-  height:100%;
-  width: 100%;
-  position: absolute;
+core-scaffold .search-header {
+  color: white;
 }
 
-core-scaffold .search-header {
-  right: 25px;
-  padding:5px;
-  width: 30px;
-  height:30px;
+core-scaffold::shadow .search-header {
+  color: white;
 }
 
 core-scaffold .sentiment-cards-section {
@@ -81,6 +72,7 @@ core-scaffold .header-title {
   width: 100%;
   color: #ececec;
   padding-left: 20px;
+  display: inline;
 }
 
 .stopselect{
@@ -94,29 +86,31 @@ core-scaffold .header-title {
 
 core-scaffold .paper-tabs {
   position: absolute;
-  bottom: 18px;
-  left: -16px;
+  bottom: 0px;
+  left: 0px;
   color: white;
   width: 100%;
+}
+
+core-scaffold core-toolbar #bottomBar{
+  width: 100%;
+  background: #2d3e4f;
+  padding: 0px;
+  margin: 0px;
 }
 
 core-scaffold paper-tabs {
   width: 100%;
   font-weight: 100;
   background: #2c3e50;
-  border-bottom: 1px solid #3f556e;
+  border-bottom: 1px solid #2d3e4f;
   font-family: 'Roboto','Helvetica', sans-serif;
 }
 
-core-scaffold paper-tab::shadow #ink {
-  color: #adb6be;
-  cursor: pointer;
-}
-
-core-scaffold paper-tabs::shadow #selectionBar {
-  background-color: white;
-  height: 4px;
-}
+core-scaffold paper-tab #ink { color: #adb6be; cursor: pointer; }
+core-scaffold paper-tabs #selectionBar { background-color: white;  height: 4px; }
+core-scaffold paper-tab::shadow #ink { color: #adb6be; cursor: pointer; }
+core-scaffold paper-tabs::shadow #selectionBar { background-color: white;  height: 4px; }
 
 
 /** Login **/
