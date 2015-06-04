@@ -7,29 +7,36 @@ html, body {
 /* Using Shadow to chrome, non-using for safari (weird shim-shadowdom bug with meteor) **/
 
 core-scaffold .core-header-panel {
-  background: #34495e;
+  background: #55626f;
   height: 100%;
 }
 
-core-scaffold::shadow core-toolbar { background: #2b3d4f; }
-core-scaffold core-toolbar { background: #2b3d4f; }
+core-scaffold .core-header-panel #section {
+  background: white !important;
+}
+
+core-scaffold::shadow core-toolbar { background: #55626f; }
+core-scaffold core-toolbar { background: #55626f; }
 
 core-scaffold::shadow core-header-panel {  background: white; }
 core-scaffold core-header-panel {  background: white; }
+
+core-scaffold core-toolbar #bottomBar{
+  width: 100%;
+  background: #55626f;
+  padding: 0px;
+  margin: 0px;
+}
 
 core-scaffold::shadow #mainContainer {
   background: white;
   height: 100%;
 }
 
-core-scaffold::shadow #topBar {
-  background: #35495d;
-}
-
 core-scaffold .core-toolbar{
   position: absolute;
   width: 100%;
-  background: #34495e;
+  background: #80e3ea;
 }
 
 core-scaffold .search-header {
@@ -67,12 +74,12 @@ core-scaffold .sentiment-cards-section {
 core-scaffold .header-title {
   font-weight: 100;
   font-family: 'Kaushan Script', cursive;
-  font-size: 38px;
+  font-size: 46px;
   text-overflow: ellipsis;
   cursor: pointer;
   width: 100%;
-  color: #ececec;
-  padding-left: 20px;
+  color: white;
+  padding: 20px;
   display: inline;
 }
 
@@ -93,25 +100,19 @@ core-scaffold .paper-tabs {
   width: 100%;
 }
 
-core-scaffold core-toolbar #bottomBar{
-  width: 100%;
-  background: #2d3e4f;
-  padding: 0px;
-  margin: 0px;
-}
-
 core-scaffold paper-tabs {
   width: 100%;
-  font-weight: 100;
-  background: #2c3e50;
-  border-bottom: 1px solid #2d3e4f;
+  font-weight: 400;
+  background: #54cdc4;
+  border-bottom: 1px solid #8ad8d5;
   font-family: 'Roboto','Helvetica', sans-serif;
 }
 
-core-scaffold paper-tab #ink { color: #adb6be; cursor: pointer; }
-core-scaffold paper-tabs #selectionBar { background-color: white;  height: 4px; }
-core-scaffold paper-tab::shadow #ink { color: #adb6be; cursor: pointer; }
-core-scaffold paper-tabs::shadow #selectionBar { background-color: white;  height: 4px; }
+core-scaffold paper-tab #ink { color: white; cursor: pointer; }
+core-scaffold paper-tab::shadow #ink { color: white; cursor: pointer; }
+
+core-scaffold paper-tabs #selectionBar { background-color: #c8f26d;  height: 4px; }
+core-scaffold paper-tabs::shadow #selectionBar { background-color: #c8f26d;  height: 4px; }
 
 
 /** Login **/
@@ -283,7 +284,6 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: white;  heigh
   height: 100px;
   border-radius: 50%;
   margin: 8px;
-  /*box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);*/
 }
 
 .user-name-account {

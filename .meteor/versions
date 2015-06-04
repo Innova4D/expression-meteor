@@ -43,6 +43,7 @@ natestrauser:animate-css@3.2.6
 npm-bcrypt@0.7.8_2
 observe-sequence@1.0.6
 ordered-dict@1.0.3
+pcel:loading@1.0.3
 qnub:emojione@0.0.3
 random@1.0.3
 reactive-dict@1.1.0
