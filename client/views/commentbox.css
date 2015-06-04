@@ -103,11 +103,22 @@ paper-radio-button.green::shadow  #onRadio { background-color: #29b872; }
 paper-radio-button.yellow::shadow #onRadio { background-color: #f9bd3e; }
 paper-radio-button.red::shadow    #onRadio { background-color: #e35a6d; }
 
+paper-radio-button.blue   #onRadio { background-color: #4285f4; }
+paper-radio-button.green  #onRadio { background-color: #29b872; }
+paper-radio-button.yellow #onRadio { background-color: #f9bd3e; }
+paper-radio-button.red    #onRadio { background-color: #e35a6d; }
+
 paper-radio-button[checked].blue::shadow   #offRadio { border-color: #4285f4; }
 paper-radio-button[checked].green::shadow  #offRadio { border-color: #29b872; }
 paper-radio-button[checked].yellow::shadow #offRadio { border-color: #f9bd3e; }
 paper-radio-button[checked].red::shadow    #offRadio { border-color: #e35a6d; }
 paper-radio-button::shadow #offRadio { border-color: #8b95a0; }
+
+paper-radio-button[checked].blue   #offRadio { border-color: #4285f4; }
+paper-radio-button[checked].green  #offRadio { border-color: #29b872; }
+paper-radio-button[checked].yellow #offRadio { border-color: #f9bd3e; }
+paper-radio-button[checked].red    #offRadio { border-color: #e35a6d; }
+paper-radio-button #offRadio { border-color: #8b95a0; }
 
 
 paper-radio-button.blue::shadow   #ink { color: #4285f4; }
@@ -115,8 +126,23 @@ paper-radio-button.green::shadow  #ink { color: #29b872; }
 paper-radio-button.yellow::shadow #ink { color: #f9bd3e; }
 paper-radio-button.red::shadow    #ink { color: #e35a6d; }
 
+paper-radio-button.blue   #ink { color: #4285f4; }
+paper-radio-button.green  #ink { color: #29b872; }
+paper-radio-button.yellow #ink { color: #f9bd3e; }
+paper-radio-button.red    #ink { color: #e35a6d; }
+
 paper-radio-button[checked]::shadow #radioLabel { color: #ffffff; }
+paper-radio-button[checked] #radioLabel { color: #ffffff; }
+
 paper-radio-button::shadow #radioLabel {
+  font-family: roboto, Helvetica, sans-serif;
+  color: #a7afb7;
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+paper-radio-button #radioLabel {
   font-family: roboto, Helvetica, sans-serif;
   color: #a7afb7;
   font-size: 13px;
