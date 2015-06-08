@@ -20,6 +20,12 @@ Template.singlecommentbox.helpers({
   },
   sentiment: function () {
     return "";//this.sentiment;
+  },
+  author: function () {
+    return this.author
+  },
+  source: function () {
+    return this.source;
   }
 });
 

@@ -44,7 +44,7 @@
 .comment-box .comment-box-subtitle {
   position: absolute;
   left: 80px;
-  bottom: 0px;
+  bottom: -5px;
   font-family: roboto, Helvetica, sans-serif;
   color: #a4abb4;
   font-size: 11px;

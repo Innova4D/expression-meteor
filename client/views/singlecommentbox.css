@@ -9,26 +9,11 @@
   padding: 3px;
   margin-left:  5px;
   margin-right: 5px;
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
   flex-flow: row;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: start;
-  -ms-flex-pack: start;
   justify-content: start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center
+  align-items: flex-start;
 }
 
 .user-photo {
@@ -37,23 +22,14 @@
   max-width: 50px;
   max-height:50px;
   margin: 5px;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   cursor: pointer;
   background-image: url("http://placehold.it/50&text=user");
   background-size: cover;
 }
 
 .user-comment {
-  margin: 6px;
+  margin: 8px;
   color: #3c4045;
-  width: auto;
-  -webkit-box-flex: 2;
-  -webkit-flex-grow: 2;
-  -ms-flex-positive: 2;
-  flex-grow: 2;
 }
 
 .user-comment p{
@@ -80,30 +56,30 @@
   background: #f6f7f8;
 }
 
-.comment-box-keywords-container {
-  -webkit-flex-flow: row;
-  -ms-flex-flow: row;
-  flex-flow: row;
-  display:  -webkit-box;
-  display:  -webkit-flex;
-  display:  -ms-flexbox;
-  display:  flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-.comment-box-keywords-title {
-  display: inline;
-  color:  #727980;
-  font-size: 10px;
-  text-decoration: none;
-}
-.comment-box-keywords {
-  display: inline;
-  color: #727980;
+.comment-box-author {
+  color: #34495b;
   cursor: pointer;
-  font-size: 10px;
-  text-decoration: underline;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 300;
+  font-family: Roboto, Helvetica, sans-serif;
+  margin: 5px;
+}
+
+.comment-box-source {
+  font-size: 9px;
+  text-transform: capitalize;
+  font-weight: 300;
+  color: #6e6e6e;
+  font-family: Roboto, Helvetica, sans-serif;
+}
+
+.comment-box-meta-end {
+  position: absolute;
+  right: 10px;
+  flex-flow: row;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

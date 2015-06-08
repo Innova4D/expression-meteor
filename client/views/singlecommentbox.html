@@ -1,16 +1,13 @@
 <template name="singlecommentbox">
-  <div class="singlecommentbox stopselect">
+  <div class="singlecommentbox">
     <div class="user-photo"></div>
-    <div class="user-comment stopselect"><p>{{text}}</p>
-      <div class="comment-box-keywords-container">
-        <div class="comment-box-keywords-title">
-          Keywords:&nbsp;
-        </div>
-        <div class="comment-box-keywords">
-          {{keywords}}
-        </div>
-      </div>
+    <div class="comment-box-meta">
+      <div class="comment-box-author">{{author}}</div>
+      <div class="user-comment"><p>{{text}}</p></div>
     </div>
-    <div class="user-sentiment">{{sentiment}}</div>
+    <div class="comment-box-meta-end">
+      <div class="comment-box-source">{{source}}</div>
+      <div class="user-sentiment">{{sentiment}}</div>
+    </div>
   </div>
 </template>
