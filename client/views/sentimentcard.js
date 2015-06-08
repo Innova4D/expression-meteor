@@ -42,6 +42,11 @@ Template.sentimentcard.events({
       template.$('.action-bar-share-card').remove();
       template.$('.dismiss-share-card').removeClass("dismiss-share-card").addClass("share-card");
     });
+  },
+  'click .past-events' : function (event,template) {
+    console.log("asd");
+    var avg = parseInt(template.$('.avg-sentiment').text());
+    Blaze.renderWithData(Template.opinionstats, {id: this._id, name: this.name, avgsentiment: avg}, $("body")[0]);
   }
 });
 
