@@ -41,6 +41,17 @@
   cursor: pointer;
 }
 
+.comment-box .comment-box-subtitle {
+  position: absolute;
+  left: 80px;
+  bottom: 0px;
+  font-family: roboto, Helvetica, sans-serif;
+  color: #a4abb4;
+  font-size: 11px;
+  font-weight: 100;
+  cursor: pointer;
+}
+
 .comment-box .commentbox-sentiment-dot {
   width: 10px;
   height:10px;

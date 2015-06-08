@@ -33,5 +33,8 @@ Template.commentbox.helpers({
       return Comments.find({topic: this.id}, {sort: {posted:-1}});
       break;
     }
+  },
+  keywords: function () {
+    return this.keywords;
   }
 });

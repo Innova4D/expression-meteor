@@ -42,6 +42,8 @@
   -ms-flex-positive: 1;
   flex-grow: 1;
   cursor: pointer;
+  background-image: url("http://placehold.it/50&text=user");
+  background-size: cover;
 }
 
 .user-comment {

@@ -67,7 +67,6 @@ core-scaffold .sentiment-cards-section {
   -ms-flex-pack: center;
   justify-content: center;
   background: #f6f6f6;
-  height: 1000px;
 }
 
 ::content > * {
