@@ -14,6 +14,10 @@
   background: white;
   border-bottom: 8px solid #fb9737;
   height: 140px;
+}
+
+.comment-box-toolbar-top {
+  display:  flex;
   padding: 15px;
 }
 
@@ -45,7 +49,7 @@
   left: 80px;
   bottom: -5px;
   font-family: roboto, Helvetica, sans-serif;
-  color: #424242;
+  color: #a7afb7;
   font-size: 11px;
   font-weight: 300;
   cursor: pointer;
@@ -88,7 +92,7 @@
   justify-content: space-around;
   align-items: center;
 
-  background: linear-gradient(rgba(255,255,255,0), #eee 20%) top center no-repeat;
+  background: linear-gradient(rgba(255,255,255,0), #efefef 15%) top center no-repeat;
 
   position: absolute;
   bottom: 0px;

@@ -23,8 +23,9 @@
   max-height:50px;
   margin: 5px;
   cursor: pointer;
-  background-image: url("http://placehold.it/50&text=user");
+  background-image: url("images/user1.png");
   background-size: cover;
+  border-radius: 50%;
 }
 
 .user-comment {
@@ -32,10 +33,11 @@
   color: #3c4045;
 }
 
-.user-comment p{
-  padding: 0px;
-  margin:  0px;
-  text-align: justify;
+.user-comment p {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  /*text-align: justify;*/
 }
 
 .user-sentiment {
@@ -53,16 +55,16 @@
 }
 
 .singlecommentbox:nth-child(odd) {
-  background: #f6f7f8;
+  background: #f7f8f8;
 }
 
 .comment-box-author {
-  color: #34495b;
+  color: #424242;
   cursor: pointer;
   font-size: 14px;
   text-transform: capitalize;
-  font-weight: 300;
-  font-family: Roboto, Helvetica, sans-serif;
+  font-weight: 500;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 5px;
 }
 
