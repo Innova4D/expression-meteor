@@ -2,12 +2,11 @@
   <div class="singlecommentbox">
     <div class="user-photo"></div>
     <div class="comment-box-meta">
-      <div class="comment-box-author">{{author}}</div>
+      <div class="comment-box-author">
+        {{author}} <div class="comment-box-source">&nbsp;{{source}}</div>
+      </div>
       <div class="user-comment"><p>{{text}}</p></div>
     </div>
-    <div class="comment-box-meta-end">
-      <div class="comment-box-source">{{source}}</div>
-      <div class="user-sentiment">{{sentiment}}</div>
-    </div>
+    <div class="user-sentiment">{{sentiment}}</div>
   </div>
 </template>

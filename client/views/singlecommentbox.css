@@ -7,12 +7,12 @@
   border-left: 1px solid #e7e7e7;
   border-right: 1px solid #e7e7e7;
   padding: 3px;
-  margin-left:  5px;
-  margin-right: 5px;
+  margin-left:  3%;
+  margin-right: 3%;
   flex-flow: row;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -66,6 +66,8 @@
   font-weight: 500;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   margin: 5px;
+  display: flex;
+  align-items: baseline;
 }
 
 .comment-box-source {
@@ -76,12 +78,11 @@
   font-family: Roboto, Helvetica, sans-serif;
 }
 
-.comment-box-meta-end {
-  position: absolute;
-  right: 10px;
-  flex-flow: row;
+.comment-box-meta {
+  flex-grow: 2;
+}
+
+.user-sentiment {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
 }

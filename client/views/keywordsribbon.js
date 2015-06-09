@@ -7,6 +7,6 @@
 */
 Template.keywordsribbon.helpers({
   keywords: function(){
-    return Object.keys(this.keywords);
+    return Object.keys(this.keywords).filter(function(e){return e});
   }
 });
