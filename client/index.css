@@ -121,16 +121,14 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
 /** Login **/
 
 #login-buttons {
-  position: absolute;
   background: white;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 300;
   /*border-radius: 5px;*/
-  display: inline;
+  display: none;
   right: 30px;
   top: -40px;
-  z-index: 1;
 }
 
 .accounts-dialog {

@@ -11,5 +11,8 @@ Template.opinionstats.events({
 });
 
 Template.opinionstats.helpers({
-
+  title: function () {
+    console.log(this);
+    return this.name;
+  }
 });

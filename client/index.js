@@ -89,7 +89,7 @@ Template.commentbox.events({
     // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
     Comments.insert({
       topic: this.id,
-      // author: null,
+      author: "Anonymous",
       posted: new Date(),
       loc: Session.get('geo'),
       sentiment: null,
@@ -105,12 +105,16 @@ Template.commentbox.events({
     return false;
   },
 
+/*****
+a=document.querySelector(".chat-list");a.scrollTop=a.scrollHeight} 
+*****/
+
   "keypress paper-input": function (event, template) {
     // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
     if (event.charCode == 13) {
       Comments.insert({
         topic: this.id,
-        // author: null,
+        author: "Anonymous",
         posted: new Date(),
         loc: Session.get('geo'),
         sentiment: null,

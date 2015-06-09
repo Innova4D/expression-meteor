@@ -1,7 +1,40 @@
 <template name="opinionstats">
   <div class="opinionstats-full animated fadeIn">
-    <paper-fab icon="close" class="close-stats-box"></paper-fab>
-    <div class="stats-title"></div>
-    
+
+    <div class="stats-topmenu">
+      <paper-fab icon="close" class="close-stats-box"></paper-fab>
+      <div class="stats-title-filter">
+        <div class="stats-title">{{title}}</div>
+        <div class="stats-filtering">
+          Show me stats from
+          <paper-dropdown-menu label="Last 24 Hours">
+            <paper-dropdown class="dropdown">
+              <core-menu class="menu">
+                <paper-item>Last 24 Hours</paper-item>
+                <paper-item>This Week</paper-item>
+                <paper-item>Last Two Weeks</paper-item>
+                <paper-item>Last Month</paper-item>
+                <paper-item>Custom</paper-item>
+              </core-menu>
+            </paper-dropdown>
+          </paper-dropdown-menu>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-results">
+      <div class="stats-positives">
+        <div class="stats-results-title stats-title-positives">Positives</div>
+        <div class="stats-positives-percent">45%</div>
+      </div>
+      <div class="stats-neutrals">
+        <div class="stats-results-title stats-title-neutral">Neutrals</div>
+        <div class="stats-neutrals-percent">45%</div>
+      </div>
+      <div class="stats-negatives">
+        <div class="stats-results-title stats-title-negatives">Negatives</div>
+        <div class="stats-negatives-percent">40%</div>
+      </div>
+    </div>
   </div>
 </template>
