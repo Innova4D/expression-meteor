@@ -45,6 +45,7 @@ observe-sequence@1.0.6
 ordered-dict@1.0.3
 pcel:loading@1.0.3
 qnub:emojione@0.0.3
+rafaelhdr:google-charts@0.0.2
 random@1.0.3
 reactive-dict@1.1.0
 reactive-var@1.0.5

@@ -1,7 +1,7 @@
 .opinionstats-full {
   top: 0;
   position: absolute;
-  background: #f6f6f6;
+  background: #cccccc;
   width: 100%;
   height:100%;
   z-index:100;
@@ -12,7 +12,7 @@
 
 .stats-topmenu {
   background: white;
-  border-bottom: 8px solid #fb9737;
+  border-bottom: 2px solid #cccccc;
   height: 140px;
   padding: 15px;
   display: flex;
@@ -104,21 +104,33 @@ html /deep/ core-overlay {
   background-color: white;
 }
 
+.stats-result {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.stats-chart {
+  max-width: 300px;
+}
+
 .stats-positives {
   padding: 15px;
   color: rgba(246, 246, 246, 0.85);
   background-color: #41ca77;
+  border-bottom: 8px solid #37ac65;
 }
-
 
 .stats-neutrals {
   padding: 15px;
   color: rgba(246, 246, 246, 0.85);
-  background-color: #dcaa45;
+  background-color: #fdb325;
+  border-bottom: 8px solid #d48c19;
 }
 
 .stats-negatives {
   padding: 15px;
   color: rgba(246, 246, 246, 0.85);
-  background-color: #ce4a5c;
+  background-color: #d8483e;
+  border-bottom: 8px solid #ae2a28;
 }

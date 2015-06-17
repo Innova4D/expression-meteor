@@ -44,7 +44,6 @@ Template.sentimentcard.events({
     });
   },
   'click .past-events' : function (event,template) {
-    console.log("asd");
     var avg = parseInt(template.$('.avg-sentiment').text());
     Blaze.renderWithData(Template.opinionstats, {id: this._id, name: this.name, avgsentiment: avg}, $("body")[0]);
   }
