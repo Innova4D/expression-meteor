@@ -37,6 +37,7 @@ Template.opinionstats.rendered = function () {
       ['Now',  3, 10, 10]
     ],
     options: {
+      // width: 450,
       height: 260,
       curveType: 'function',
       legend: { position: 'bottom' },
