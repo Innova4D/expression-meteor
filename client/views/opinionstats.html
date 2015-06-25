@@ -24,19 +24,31 @@
     <div class="google-chart-container">
       <div id="stats-chart"></div>
     </div>
+    <!-- <div class="stats-results-words">
+      Hola mundo!!!
+    </div> -->
     <div class="stats-results-container">
       <div class="stats-result stats-positives">
-        <div class="stats-percent stats-positives-percent">45%</div>
+        <div class="stats-numbers">
+          <div class="stats-percent stats-positives-percent">{{positivesPercent}}%</div>
+          <div class="stats-count stats-positives-count">{{positivesCount}} Comments</div>
+        </div>
         <div class="stats-results-title stats-title-positives">Positives</div>
         <paper-icon-button class="stats-expand-positives" icon="expand-more"></paper-icon-button>
       </div>
       <div class="stats-result stats-neutrals">
-        <div class="stats-percent stats-neutrals-percent">45%</div>
+        <div class="stats-numbers">
+          <div class="stats-percent stats-neutrals-percent">{{neutralsPercent}}%</div>
+          <div class="stats-count stats-positives-count">{{neutralsCount}} Comments</div>
+        </div>
         <div class="stats-results-title stats-title-neutral">Neutrals</div>
         <paper-icon-button icon="expand-more" class="stats-expand-neutrals"></paper-icon-button>
       </div>
       <div class="stats-result stats-negatives">
-        <div class="stats-percent stats-negatives-percent">40%</div>
+        <div class="stats-numbers">
+          <div class="stats-percent stats-negatives-percent">{{negativesPercent}}%</div>
+          <div class="stats-count stats-positives-count">{{negativesCount}} Comments</div>
+        </div>
         <div class="stats-results-title stats-title-negatives">Negatives</div>
         <paper-icon-button icon="expand-more" class="stats-expand-negatives"></paper-icon-button>
       </div>

@@ -16,6 +16,36 @@ Template.opinionstats.events({
 Template.opinionstats.helpers({
   title: function () {
     return this.name;
+  },
+  positivesPercent: function () {
+    var currentTime = new Date();
+    var total = Comments.find({topic: this.id}).count();
+    var sentiment = Comments.find({topic: this.id, sentiment: { $gt: 0, $lt: 3 }}).count();
+    return ((sentiment/total) * 100).toFixed(2);
+  },
+  neutralsPercent: function () {
+    var currentTime = new Date();
+    var total = Comments.find({topic: this.id}).count();
+    var sentiment = Comments.find({topic: this.id, sentiment: 0}).count();
+    return ((sentiment/total) * 100).toFixed(2);
+  },
+  negativesPercent: function() {
+    var currentTime = new Date();
+    var total = Comments.find({topic: this.id}).count();
+    var sentiment = Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }}).count();
+    return ((sentiment/total) * 100).toFixed(2);
+  },
+  positivesCount: function () {
+    var currentTime = new Date();
+    return Comments.find({topic: this.id, sentiment: { $gt: 0, $lt: 3 }}).count();
+  },
+  neutralsCount: function () {
+    var currentTime = new Date();
+    return Comments.find({topic: this.id, sentiment: 0}).count();
+  },
+  negativesCount: function() {
+    var currentTime = new Date();
+    return Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }}).count();
   }
 });
 
