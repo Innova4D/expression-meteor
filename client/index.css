@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  background: white;
+  background: #f6f6f6;
 }
 
 /*** Important ***/
@@ -12,7 +12,7 @@ core-scaffold .core-header-panel {
 }
 
 core-scaffold .core-header-panel #section {
-  background: #eeeeee !important;
+  background: #f6f6f6 !important;
 }
 
 core-scaffold #scrim {
@@ -22,8 +22,8 @@ core-scaffold #scrim {
 core-scaffold::shadow core-toolbar { background: white; }
 core-scaffold core-toolbar { background: white; }
 
-core-scaffold::shadow core-header-panel {  background: white; }
-core-scaffold core-header-panel {  background: white; }
+core-scaffold::shadow core-header-panel {  background: #f6f6f6; }
+core-scaffold core-header-panel {  background: #f6f6f6; }
 
 core-scaffold core-toolbar #bottomBar{
   width: 100%;
@@ -33,7 +33,7 @@ core-scaffold core-toolbar #bottomBar{
 }
 
 core-scaffold::shadow #mainContainer {
-  background: #e5e5e5;
+  background: #f6f6f6;
   height: 100%;
 }
 
