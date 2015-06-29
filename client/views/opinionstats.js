@@ -75,6 +75,7 @@ Template.opinionstats.rendered = function () {
     }
   };
 
+  /** Drawing the word cloud **/
   function drawWordCloud() {
     data = new google.visualization.DataTable();
     data.addColumn('string', 'Label');
