@@ -6,6 +6,6 @@ Expression is developed using meteor.js and a reactive design in mind.
 
 ## Some screenshots:
 
-<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp1.png" width="50%"/>
-<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp2.png" width="50%"/>
-<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp3.png" width="50%"/>
+<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp1.png" width="200px"/>
+<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp2.png" width="200px"/>
+<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp3.png" width="200px"/>
