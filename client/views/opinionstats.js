@@ -7,9 +7,6 @@ Template.opinionstats.events({
     template.$(".opinionstats-full").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       template.$(".opinionstats-full").remove();
     });
-  },
-  'click .stats-expand-positives' : function (event,template) {
-    /// Smart stuff...
   }
 });
 
@@ -46,6 +43,57 @@ Template.opinionstats.helpers({
   negativesCount: function() {
     var currentTime = new Date();
     return Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }}).count();
+  },
+  commentsCount: function () {
+    var count = Comments.find({topic: this.id}).count();
+    Session.set("stats-comments", count);
+    /** Get the data **/
+    var positivesKW = Comments.find({topic: this.id, sentiment: { $gt: 0, $lt: 3 }});
+    var neutralsKW  = Comments.find({topic: this.id, sentiment: 0});
+    var negativesKW = Comments.find({topic: this.id, sentiment: { $gt: -3, $lt: 0 }});
+    /** Hope I could use FlatMap **/
+    var aPositives = [];
+    var aNeutrals  = [];
+    var aNegatives = [];
+    positivesKW.forEach(function (c, i) { aPositives = aPositives.concat(c.keywords); });
+    negativesKW.forEach(function (c, i) { aNegatives = aNegatives.concat(c.keywords); });
+    neutralsKW.forEach(function (c, i)  { aNeutrals  = aNeutrals.concat(c.keywords); });
+    /**
+    * Count them all and pack it
+    * (Using Underscore.js) -> http://underscorejs.org/#countBy
+    **/
+    var oPositives = _.countBy(aPositives, _.identity);
+    var oNegatives = _.countBy(aNegatives, _.identity);
+    var oNeutrals  = _.countBy(aNeutrals, _.identity);
+
+    var aPositives = [];
+    var aNegatives = [];
+    var aNeutrals  = [];
+
+    for (var key in oPositives) {
+      if (oPositives.hasOwnProperty(key) && key != "")
+      aPositives.push([key,oPositives[key]]);
+    }
+
+    for (var key in oPositives) {
+      if (oPositives.hasOwnProperty(key) && key != "")
+      aNegatives.push([key,oPositives[key]]);
+    }
+
+    for (var key in oPositives) {
+      if (oPositives.hasOwnProperty(key) && key != "")
+      aNeutrals.push([key,oPositives[key]]);
+    }
+
+    aPositives.sort(function(a, b) { return a[1] <  b[1] ? 1 : -1; });
+    aNegatives.sort(function(a, b) { return a[1] <  b[1] ? 1 : -1; });
+    aNeutrals.sort(function(a, b) { return a[1] <  b[1] ? 1 : -1; });
+
+    /** Push it as a session variable to simulate reactivity ***/
+    Session.set("stats-words-positives", aPositives);
+    Session.set("stats-words-negatives", aNegatives);
+    Session.set("stats-words-neutrals",  aNeutrals);
+    return count;
   }
 });
 
@@ -76,27 +124,38 @@ Template.opinionstats.rendered = function () {
   };
 
   /** Drawing the word cloud **/
-  function drawWordCloud() {
+  function drawWordCloud(rows, element, p) {
     data = new google.visualization.DataTable();
     data.addColumn('string', 'Label');
     data.addColumn('number', 'Value');
-    data.addRows(5);
-    data.setValue(0, 0,'First');  data.setValue(0, 1, 10);
-    data.setValue(1, 0,'Second'); data.setValue(1, 1, 30);
-    data.setValue(2, 0,'Third');  data.setValue(2, 1, 50);
-    data.setValue(3, 0,'Fourth'); data.setValue(3, 1, 20);
-    data.setValue(4, 0,'Fifth');  data.setValue(4, 1, 30);
-    var tc = new TermCloud(document.getElementById('cloud-positives')).draw(data,null);
-    var tc = new TermCloud(document.getElementById('cloud-neutrals')).draw(data,null);
-    var tc = new TermCloud(document.getElementById('cloud-negatives')).draw(data,null);
+    data.addRows(rows);
+
+    for (i=0; i<rows; i++) {
+      data.setValue(i, 0, p[i][0]);  data.setValue(i, 1, p[i][0]);
+    }
+    var tc = new TermCloud(document.getElementById(element)).draw(data,null);
   }
+
   /** Render **/
   drawChart(chart);
-  drawWordCloud();
 
   window.onresize = function(event) {
-    console.log(event.currentTarget.innerWidth);
+    // console.log(event.currentTarget.innerWidth);
     drawChart(chart);
-    drawWordCloud();
   };
+
+  /*** Track session variables to render "Reactively" ***/
+  Tracker.autorun(function () {
+    // var bar = Session.get("stats-comments");
+    // drawChart(chart);
+
+    var oPositives = Session.get("stats-words-positives");
+    var oNegatives = Session.get("stats-words-negatives");
+    var oNeutrals  = Session.get("stats-words-neutrals");
+
+    drawWordCloud(Object.keys(oPositives).length,"cloud-positives",oPositives);
+    drawWordCloud(Object.keys(oNegatives).length,"cloud-negatives",oNegatives);
+    drawWordCloud(Object.keys(oNeutrals).length,"cloud-neutrals",oNeutrals);
+  });
+
 };

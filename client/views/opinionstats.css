@@ -169,14 +169,14 @@ html /deep/ core-overlay {
   text-decoration: none;
 }
 
-.term-cloud-1 {font-size: 13px; color: rgba(255, 255, 255, .5); }
+.term-cloud-1 {font-size: 13px; color: rgba(255, 255, 255, .5);  }
 .term-cloud-2 {font-size: 14px; color: rgba(255, 255, 255, .55); }
 .term-cloud-3 {font-size: 18px; color: rgba(255, 255, 255, .55); }
-.term-cloud-4 {font-size: 22px; color: rgba(255, 255, 255, .6); }
+.term-cloud-4 {font-size: 22px; color: rgba(255, 255, 255, .6);  }
 .term-cloud-5 {font-size: 26px; color: rgba(255, 255, 255, .65); }
-.term-cloud-6 {font-size: 32px; color: rgba(255, 255, 255, .8); }
+.term-cloud-6 {font-size: 32px; color: rgba(255, 255, 255, .8);  }
 .term-cloud-7 {font-size: 36px; color: rgba(255, 255, 255, .85); }
-.term-cloud-8 {font-size: 40px; color: rgba(255, 255, 255, .9); }
+.term-cloud-8 {font-size: 40px; color: rgba(255, 255, 255, .9);  }
 .term-cloud-9 {font-size: 44px; color: rgba(255, 255, 255, .95); }
 
 .term-cloud-error {font-family: arial; font-size: 10px; color: red; text-decoration: none;}
