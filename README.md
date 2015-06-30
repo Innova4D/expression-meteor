@@ -4,8 +4,8 @@ Expression is a WebApp for Sentiment Analysis. A community where you can share o
 
 Expression is developed using meteor.js and a reactive design in mind.
 
-## Some screenshots:
+## Screenshots:
 
-<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp1.png" width="200px"/>
-<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp2.png" width="200px"/>
-<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp3.png" width="200px"/>
+<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp1.png" width="250px"/>
+<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp2.png" width="250px"/>
+<img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp3.png" width="250px"/>
