@@ -75,14 +75,14 @@ Template.opinionstats.helpers({
       aPositives.push([key,oPositives[key]]);
     }
 
-    for (var key in oPositives) {
-      if (oPositives.hasOwnProperty(key) && key != "")
-      aNegatives.push([key,oPositives[key]]);
+    for (var key in oNegatives) {
+      if (oNegatives.hasOwnProperty(key) && key != "")
+      aNegatives.push([key,oNegatives[key]]);
     }
 
-    for (var key in oPositives) {
-      if (oPositives.hasOwnProperty(key) && key != "")
-      aNeutrals.push([key,oPositives[key]]);
+    for (var key in oNeutrals) {
+      if (oNeutrals.hasOwnProperty(key) && key != "")
+      aNeutrals.push([key,oNeutrals[key]]);
     }
 
     aPositives.sort(function(a, b) { return a[1] <  b[1] ? 1 : -1; });
@@ -129,9 +129,12 @@ Template.opinionstats.rendered = function () {
     data.addColumn('string', 'Label');
     data.addColumn('number', 'Value');
     data.addRows(rows);
-
-    for (i=0; i<rows; i++) {
-      data.setValue(i, 0, p[i][0]);  data.setValue(i, 1, p[i][0]);
+    if(p.length == 1) {
+      data.setValue(0, 0, p[0][0]);  data.setValue(0, 1, p[0][1]);
+    } else {
+      for (i=0; i<rows; i++) {
+        data.setValue(i, 0, p[i][0]);  data.setValue(i, 1, p[i][1]);
+      }
     }
     var tc = new TermCloud(document.getElementById(element)).draw(data,null);
   }
@@ -140,22 +143,18 @@ Template.opinionstats.rendered = function () {
   drawChart(chart);
 
   window.onresize = function(event) {
-    // console.log(event.currentTarget.innerWidth);
     drawChart(chart);
   };
 
   /*** Track session variables to render "Reactively" ***/
   Tracker.autorun(function () {
-    // var bar = Session.get("stats-comments");
-    // drawChart(chart);
-
     var oPositives = Session.get("stats-words-positives");
     var oNegatives = Session.get("stats-words-negatives");
     var oNeutrals  = Session.get("stats-words-neutrals");
 
-    drawWordCloud(Object.keys(oPositives).length,"cloud-positives",oPositives);
-    drawWordCloud(Object.keys(oNegatives).length,"cloud-negatives",oNegatives);
-    drawWordCloud(Object.keys(oNeutrals).length,"cloud-neutrals",oNeutrals);
+    drawWordCloud(5,"cloud-positives",oPositives);
+    drawWordCloud(5,"cloud-negatives",oNegatives);
+    drawWordCloud(5,"cloud-neutrals",oNeutrals);
   });
 
 };
