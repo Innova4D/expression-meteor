@@ -1,4 +1,7 @@
-/*** ***/
+/*
+ * opinionstats.js
+ * Francisco Gutiérrez fsalvador23@gmail.com
+ */
 
 
 Template.opinionstats.events({
@@ -7,6 +10,15 @@ Template.opinionstats.events({
     template.$(".opinionstats-full").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
       template.$(".opinionstats-full").remove();
     });
+  },
+  'click paper-item': function (event, template) {
+    switch(event.target.innerHTML) {
+      case "Custom":         Session.set("stats-time", "Custom");         break;
+      case "This Week":      Session.set("stats-time", "This Week");      break;
+      case "Last Month":     Session.set("stats-time", "Last Month");     break;
+      case "Last 24 Hours":  Session.set("stats-time", "Last 24 Hours");  break;
+      case "Last Two Weeks": Session.set("stats-time", "Last Two Weeks"); break;
+    }
   }
 });
 
@@ -148,10 +160,18 @@ Template.opinionstats.rendered = function () {
 
   /*** Track session variables to render "Reactively" ***/
   Tracker.autorun(function () {
+    /**** Line Chart "Listener" ***/
+    switch(Session.get("stats-time")) {
+      case "Custom":         drawChart(chart); break;
+      case "This Week":      drawChart(chart); break;
+      case "Last Month":     drawChart(chart); break;
+      case "Last 24 Hours":  drawChart(chart); break;
+      case "Last Two Weeks": drawChart(chart); break;
+    }
+    /**** Word Cloud "Listener" ***/
     var oPositives = Session.get("stats-words-positives");
     var oNegatives = Session.get("stats-words-negatives");
     var oNeutrals  = Session.get("stats-words-neutrals");
-
     drawWordCloud(5,"cloud-positives",oPositives);
     drawWordCloud(5,"cloud-negatives",oNegatives);
     drawWordCloud(5,"cloud-neutrals",oNeutrals);
