@@ -58,6 +58,12 @@ Template.commentbox.events({
   }
 });
 
+Template.body.events ({
+  'click .search-header': function (event,template) {
+    Blaze.render(Template.searchbox, $("body")[0]);
+  }
+});
+
 Template.singlecommentbox.rendered = function(){
   switch (this.data.sentiment) {
     case -2:
@@ -106,7 +112,7 @@ Template.commentbox.events({
   },
 
 /*****
-a=document.querySelector(".chat-list");a.scrollTop=a.scrollHeight} 
+a=document.querySelector(".chat-list");a.scrollTop=a.scrollHeight}
 *****/
 
   "keypress paper-input": function (event, template) {

@@ -126,9 +126,11 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
   font-size: 14px;
   font-weight: 300;
   /*border-radius: 5px;*/
-  display: none;
+  /*display: none;*/
   right: 30px;
   top: -40px;
+  position: absolute;
+  z-index: 1;
 }
 
 .accounts-dialog {
