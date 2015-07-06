@@ -69,14 +69,18 @@
       </div>
       <div class="bottom">
         <paper-tabs class="paper-tabs" selected="1" role="tablist">
-          <paper-tab role="tab">Pinned</paper-tab>
-          <paper-tab role="tab" class="core-selected" active>Trending</paper-tab>
-          <paper-tab role="tab">Recommended</paper-tab>
+          <paper-tab role="tab" class="tab-pinned">Pinned</paper-tab>
+          <paper-tab role="tab" class="tab-trending core-selected" active>Trending</paper-tab>
+          <paper-tab role="tab" class="tab-recommended" >Recommended</paper-tab>
         </paper-tabs>
       </div>
     </core-toolbar>
     <div>
       <section id="section" class="container-fluid topics sentiment-cards-section stopselect">
+        <div class="section-message">
+          <img src="images/warning.png" width="50px">
+          You must register or login to see your pinned topics or recommendations...
+        </div>
         {{#each topics}}
         {{> sentimentcard}}
         {{/each}}

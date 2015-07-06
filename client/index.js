@@ -61,6 +61,19 @@ Template.commentbox.events({
 Template.body.events ({
   'click .search-header': function (event,template) {
     Blaze.render(Template.searchbox, $("body")[0]);
+  },
+  'click .tab-pinned': function (event,template) {
+    $(".sentiment-card").css("display","none");
+    $(".section-message").css("display","flex");
+
+  },
+  'click .tab-trending': function (event,template) {
+    $(".sentiment-card").css("display","block");
+    $(".section-message").css("display","none");
+  },
+  'click .tab-recommended': function (event,template) {
+    $(".sentiment-card").css("display","none");
+    $(".section-message").css("display","flex");
   }
 });
 

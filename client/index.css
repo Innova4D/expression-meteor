@@ -332,3 +332,17 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
 .expression-description img {
   opacity: 0.95;
 }
+
+.section-message {
+  display: none;
+  height: 300px;
+  flex-direction:  column;
+  justify-content: center;
+  align-items:     center;
+
+  color: #c1c1c1;
+  font-family: Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 100;
+}
