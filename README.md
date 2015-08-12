@@ -17,11 +17,17 @@ meteor
 ´´´
 
 # Documentation
+
 The project is structured as follows:
+
 - Source code is organized in templates, inside client and views folders.
-- The root of application can be found at index.html.
-- Each HTML file comes with their respective CSS and JS file with the same name.
-- For more detailed information about meteorjs proyect structure please refer to: docs.meteor.com/#/full/
+- The root of the application can be found at index.html.
+- Each HTML file comes with their respective CSS and JS file with the same name, concerns are separated with pure JavaScript and CSS code.
+- For more detailed information about meteor.js project structure please refer to: docs.meteor.com/#/full/
+
+CSS Notes:
+- The position of the application relies in the [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) distribution model.
+
 ## Screenshots:
 
 <img src="http://www.innova4d.mx/wp-content/uploads/2015/06/exp1.png" width="350px"/>

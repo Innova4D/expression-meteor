@@ -1,13 +1,13 @@
 /*
  * Index.js
- * These methods
+ * These methods are related to global app configurations
  */
 Topics   = new Mongo.Collection("topics");
 Comments = new Mongo.Collection("comments");
 
 /*
  * Publish/Suscribe
- * Related to Server side index.js
+ * Related to Server index.js (Check server folder)
  */
 
 Meteor.subscribe("topics");
@@ -25,24 +25,6 @@ Meteor.startup(function() {
     }
   });
 });
-
-Template.sentimentmap.helpers({
-  mapOptions: function() {
-    if (GoogleMaps.loaded()) {
-      return {
-        center: new google.maps.LatLng(23.6260333, -102.5377501),
-        zoom: 3,
-        disableDefaultUI: true,
-        scrollwheel: false,
-        navigationControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-        draggable: false
-      };
-    }
-  }
-});
-
 
 Template.body.helpers({
   topics: function () {
