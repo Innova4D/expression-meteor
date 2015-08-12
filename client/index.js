@@ -5,12 +5,19 @@
 Topics   = new Mongo.Collection("topics");
 Comments = new Mongo.Collection("comments");
 
+/*
+ * Publish/Suscribe
+ * Related to Server side index.js
+ */
+
 Meteor.subscribe("topics");
 Meteor.subscribe("comments");
 
+/*
+ * When the app initiates, start geolocation tracking...
+ */
 Meteor.startup(function() {
   GoogleMaps.load();
-
   Tracker.autorun(function () {
     var geo = Geolocation.currentLocation();
     if(geo) {
