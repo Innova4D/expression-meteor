@@ -6,7 +6,10 @@ Expression is developed using **meteorjs** with a **reactive design** in mind.
 
 ## Tutorial
 
-To run the application simply:
+To run the application:
+
+- Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Install [meteorjs](https://www.meteor.com/)
 
 ´´´bash
 git clone http://github.com/innova4d/expression-meteor
@@ -14,8 +17,8 @@ meteor
 ´´´
 
 # Documentation
-The project is structured in the following way:
-
+The project is structured as follows:
+- Source code is organized in templates, inside client and views folders.
 - The root of application can be found at index.html.
 - Each HTML file comes with their respective CSS and JS file with the same name.
 - For more detailed information about meteorjs proyect structure please refer to: docs.meteor.com/#/full/
