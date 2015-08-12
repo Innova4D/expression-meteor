@@ -1,3 +1,7 @@
+/*
+ * Index.js
+ * These methods
+ */
 Topics   = new Mongo.Collection("topics");
 Comments = new Mongo.Collection("comments");
 
@@ -32,29 +36,10 @@ Template.sentimentmap.helpers({
   }
 });
 
-Template.sentimentmap.onCreated(function() {
-  // We can use the `ready` callback to interact with the map API once the map is ready.
-  GoogleMaps.ready('sentimentMap', function(map) {
-    // Add a marker to the map once it's ready
-    var marker = new google.maps.Marker({
-      position: map.options.center,
-      map: map.instance
-    });
-  });
-});
 
 Template.body.helpers({
   topics: function () {
     return Topics.find({});
-  }
-});
-
-Template.commentbox.events({
-  'click .close-comment-box': function (event,template) {
-    template.$(".comment-box").removeClass("animated fadeIn").addClass("animated fadeOut");
-    template.$(".comment-box").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-      template.$(".comment-box").remove();
-    });
   }
 });
 
@@ -77,101 +62,7 @@ Template.body.events ({
   }
 });
 
-Template.singlecommentbox.rendered = function(){
-  switch (this.data.sentiment) {
-    case -2:
-    this.$(".user-sentiment").css('background-color', '#e5596b');
-    break;
-    case -1:
-    this.$(".user-sentiment").css('background-color', '#e5596b');
-    break;
-    case 0:
-    this.$(".user-sentiment").css('background-color', '#fabe2c');
-    break;
-    case 1:
-    this.$(".user-sentiment").css('background-color', '#1cb970');
-    break;
-    case 2:
-    this.$(".user-sentiment").css('background-color', '#1cb970');
-    break;
-  }
-};
-
-
-/*
-* Insert a Comment to MongoDB from CommentBox.
-* Keypressed and OnClick Events...
-*/
-
-Template.commentbox.events({
-  "click .comment-box-send": function (event, template) {
-    // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
-    Comments.insert({
-      topic: this.id,
-      author: "Anonymous",
-      posted: new Date(),
-      loc: Session.get('geo'),
-      sentiment: null,
-      keywords: null,
-      text: template.$(".comment-box-input").val(),
-      source: "app"
-    });
-    // Clear form
-    template.$(".comment-box-input").val("");
-
-    // Prevent default form submit
-    event.stopPropagation();
-    return false;
-  },
-
-/*****
-a=document.querySelector(".chat-list");a.scrollTop=a.scrollHeight}
-*****/
-
-  "keypress paper-input": function (event, template) {
-    // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
-    if (event.charCode == 13) {
-      Comments.insert({
-        topic: this.id,
-        author: "Anonymous",
-        posted: new Date(),
-        loc: Session.get('geo'),
-        sentiment: null,
-        keywords: null,
-        text: template.$(".comment-box-input").val(),
-        source: "app"
-      });
-      // Clear form
-      template.$(".comment-box-input").val("");
-
-      // Prevent default form submit
-      event.stopPropagation();
-      return false;
-    }
-  }
-});
-
-Template.commentbox.rendered = function(){
-  switch (this.data.avgsentiment) {
-    case 0:
-    this.$(".commentbox-sentiment-dot").css('background-color', '#e35a6d');
-    break;
-    case 1:
-    this.$(".commentbox-sentiment-dot").css('background-color', '#e35a6d');
-    break;
-    case 2:
-    this.$(".commentbox-sentiment-dot").css('background-color', '#f4bd57');
-    break;
-    case 3:
-    this.$(".commentbox-sentiment-dot").css('background-color', '#41ca77');
-    break;
-    case 4:
-    this.$(".commentbox-sentiment-dot").css('background-color', '#41ca77');
-    break;
-  }
-};
-
-/** Mongo Queries **/
+/** Mongo Queries, for testing Purposes **/
 // db.topics.find()
 // db.topics.insert({name: "UDLAP", sentiment: 2, isActive: true,timestamp: new Date(),share: 0	});
 // db.topics.insert({name: "Puebla", sentiment: 0, isActive: true,timestamp: new Date(),share: 0	});
