@@ -2,7 +2,7 @@
 
 Expression is a **WebApp** for **Sentiment Analysis**. A social platform where people can share opinions about topics of interest on real-time. People can start sharing opinions anonymously or sign up to follow topics and get notified when the sentiment and opinion tendency about a topic changes. Expression is a proof of concept prototype. Developed by **Innova4D** research group at **Universidad de las Américas, Puebla**.
 
-Expression is developed using **meteorjs** with a [**reactive design**](http://www.reactivemanifesto.org/) in mind.
+Expression is developed using **meteorjs** and MongoDB with a [**reactive design**](http://www.reactivemanifesto.org/) in mind.
 
 ## Tutorial
 
@@ -13,6 +13,7 @@ To run the application:
 
 ```bash
 git clone http://github.com/innova4d/expression-meteor
+cd expression-meteor
 meteor
 ```
 
@@ -27,6 +28,8 @@ The project is structured as follows:
 
 CSS Notes:
 - The distribution of DOM objects in the view relies in the  [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) distribution model.
+
+# Future Work
 
 ## Screenshots:
 
