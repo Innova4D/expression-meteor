@@ -14,7 +14,7 @@ To run the application:
 ```bash
 git clone http://github.com/innova4d/expression-meteor
 meteor
-``
+```
 
 # Documentation
 
