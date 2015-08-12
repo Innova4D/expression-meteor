@@ -1,8 +1,8 @@
 # expression-webapp
 
-Expression is a **WebApp** for **Sentiment Analysis**. A social platform where you can share opinions about topics of interest on real-time. You can start sharing opinions anonymously or sign up to follow topics and get notified when the sentiment and opinion tendency about a topic changes. Expression is a proof of concept prototype. Developed by **Innova4D** research group at **Universidad de las Américas, Puebla**.
+Expression is a **WebApp** for **Sentiment Analysis**. A social platform where people can share opinions about topics of interest on real-time. People can start sharing opinions anonymously or sign up to follow topics and get notified when the sentiment and opinion tendency about a topic changes. Expression is a proof of concept prototype. Developed by **Innova4D** research group at **Universidad de las Américas, Puebla**.
 
-Expression is developed using **meteorjs** with a **reactive design** in mind.
+Expression is developed using **meteorjs** with a [**reactive design**](http://www.reactivemanifesto.org/) in mind.
 
 ## Tutorial
 
