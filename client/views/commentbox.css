@@ -1,7 +1,6 @@
 /*
-* Comment-box CSS Template Definition.
-*
-*/
+ * Comment-box CSS Template Definition.
+ */
 .comment-box {
   top: 0;
   position: absolute;
@@ -21,7 +20,6 @@
   display:  flex;
   padding: 15px;
 }
-
 
 .comment-box-core-header-panel {
   height: 110px;

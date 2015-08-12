@@ -32,4 +32,23 @@ Template.singlecommentbox.helpers({
 /*
 * When the singlecommentbox renders, do this:
 */
-Template.singlecommentbox.rendered = function () {};
+
+Template.singlecommentbox.rendered = function(){
+  switch (this.data.sentiment) {
+    case -2:
+    this.$(".user-sentiment").css('background-color', '#e5596b');
+    break;
+    case -1:
+    this.$(".user-sentiment").css('background-color', '#e5596b');
+    break;
+    case 0:
+    this.$(".user-sentiment").css('background-color', '#fabe2c');
+    break;
+    case 1:
+    this.$(".user-sentiment").css('background-color', '#1cb970');
+    break;
+    case 2:
+    this.$(".user-sentiment").css('background-color', '#1cb970');
+    break;
+  }
+};

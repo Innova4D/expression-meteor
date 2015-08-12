@@ -38,3 +38,67 @@ Template.commentbox.helpers({
     return this.keywords;
   }
 });
+
+
+Template.commentbox.events({
+  'click .close-comment-box': function (event,template) {
+    template.$(".comment-box").removeClass("animated fadeIn").addClass("animated fadeOut");
+    template.$(".comment-box").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+      template.$(".comment-box").remove();
+    });
+  }
+});
+
+/*
+* Insert a Comment to MongoDB from CommentBox.
+* Keypressed and OnClick Events...
+*/
+
+Template.commentbox.events({
+  "click .comment-box-send": function (event, template) {
+    // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
+    Comments.insert({
+      topic: this.id,
+      author: "Anonymous",
+      posted: new Date(),
+      loc: Session.get('geo'),
+      sentiment: null,
+      keywords: null,
+      text: template.$(".comment-box-input").val(),
+      source: "app"
+    });
+    // Clear form
+    template.$(".comment-box-input").val("");
+
+    // Prevent default form submit
+    event.stopPropagation();
+    return false;
+  },
+
+/* When new comment, the box must scroll to top:
+ * Work in progress:
+ * a=document.querySelector(".chat-list");a.scrollTop=a.scrollHeight}
+ */
+
+  "keypress paper-input": function (event, template) {
+    // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
+    if (event.charCode == 13) {
+      Comments.insert({
+        topic: this.id,
+        author: "Anonymous",
+        posted: new Date(),
+        loc: Session.get('geo'),
+        sentiment: null,
+        keywords: null,
+        text: template.$(".comment-box-input").val(),
+        source: "app"
+      });
+      // Clear form
+      template.$(".comment-box-input").val("");
+
+      // Prevent default form submit
+      event.stopPropagation();
+      return false;
+    }
+  }
+});
