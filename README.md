@@ -16,6 +16,7 @@ git clone http://github.com/innova4d/expression-meteor
 cd expression-meteor
 meteor
 ```
+- [Atom](https://atom.io/) is a suggested editor.
 
 # Documentation
 

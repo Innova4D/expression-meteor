@@ -1,10 +1,7 @@
 /*
-* Sentiment Ribbon Logic.
-*/
-
-/*
-* When reactive, do this:
-*/
+ * Comments Ribbon Js
+ */
+ 
 Template.commentsribbon.helpers({
   randomcomments: function(){
     var array = Comments.find({topic: this._id}).fetch();
