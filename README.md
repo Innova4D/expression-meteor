@@ -11,10 +11,10 @@ To run the application:
 - Install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 - Install [meteorjs](https://www.meteor.com/)
 
-´´´bash
+```bash
 git clone http://github.com/innova4d/expression-meteor
 meteor
-´´´
+``
 
 # Documentation
 
@@ -26,7 +26,7 @@ The project is structured as follows:
 - For more detailed information about meteor.js project structure please refer to: docs.meteor.com/#/full/
 
 CSS Notes:
-- The position of the application relies in the [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) distribution model.
+- The distribution of DOM objects in the view relies in the  [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) distribution model.
 
 ## Screenshots:
 
