@@ -39,7 +39,6 @@ Template.commentbox.helpers({
   }
 });
 
-
 Template.commentbox.events({
   'click .close-comment-box': function (event,template) {
     template.$(".comment-box").removeClass("animated fadeIn").addClass("animated fadeOut");
@@ -53,7 +52,6 @@ Template.commentbox.events({
 * Insert a Comment to MongoDB from CommentBox.
 * Keypressed and OnClick Events...
 */
-
 Template.commentbox.events({
   "click .comment-box-send": function (event, template) {
     // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
@@ -79,7 +77,6 @@ Template.commentbox.events({
  * Work in progress:
  * a=document.querySelector(".chat-list");a.scrollTop=a.scrollHeight}
  */
-
   "keypress paper-input": function (event, template) {
     // var random = _.sample([-2, -1, 0, 1, 2]); //Testing Purposes
     if (event.charCode == 13) {

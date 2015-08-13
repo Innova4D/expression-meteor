@@ -12,6 +12,10 @@ Template.sentimentmap.onCreated(function() {
   });
 });
 
+/*
+ * sentimentMap Configurations.
+ */
+
 Template.sentimentmap.helpers({
   mapOptions: function() {
     if (GoogleMaps.loaded()) {

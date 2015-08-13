@@ -26,12 +26,18 @@ Meteor.startup(function() {
   });
 });
 
+/*
+ * Get all the topics (sentiment cards) from Mongo.
+ */
 Template.body.helpers({
   topics: function () {
     return Topics.find({});
   }
 });
 
+/*
+ * Catch some events that happen in the app.
+ */
 Template.body.events ({
   'click .search-header': function (event,template) {
     Blaze.render(Template.searchbox, $("body")[0]);
@@ -39,7 +45,6 @@ Template.body.events ({
   'click .tab-pinned': function (event,template) {
     $(".sentiment-card").css("display","none");
     $(".section-message").css("display","flex");
-
   },
   'click .tab-trending': function (event,template) {
     $(".sentiment-card").css("display","block");
