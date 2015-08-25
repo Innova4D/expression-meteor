@@ -57,11 +57,18 @@ Template.body.events ({
 });
 
 /** Mongo Queries, for testing Purposes **/
-// db.topics.find()
+// db.topics.find().pretty()
+
+// Not working ---->
 // db.topics.insert({name: "UDLAP", sentiment: 2, isActive: true,timestamp: new Date(),share: 0	});
 // db.topics.insert({name: "Puebla", sentiment: 0, isActive: true,timestamp: new Date(),share: 0	});
 // db.topics.insert({name: "Peña Nieto", sentiment: -2, isActive: true,timestamp: new Date(),share: 0	});
+// <------
+
+// Use this ->
+//db.topics.insert({ name : "Francisco", isActive : 1, creator : "Twitter", timestamp : ISODate("2015-07-07T16:03:40.838Z"), avgSen : 0.45081967213114754, total : 252, bars : { excellent : 72, good : 68, neutral : 13, bad : 92, terrible : 7	}, keywords : { Guerrero : 22, crimen : 18, ayudemos : 16, red : 6, rat : 5 }});
+
 /* Positive */
-//db.comments.insert({topic: ObjectId("55540d606638db2164f2aca8"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:2, keywords: ["bonito", "hermoso"], text: "El cielo es bonito y muy hermoso"})
+// db.comments.insert({topic: ObjectId("55dca3ae250af98ebba3a443"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:2, keywords: ["bonito", "hermoso"], text: "El cielo es bonito y muy hermoso"})
 /* Negative */
 //db.comments.insert({topic: ObjectId("55539ff2669903184654bd04"), author: null, posted: new Date(), loc: {lng: 98.91, lat: 110.23}, sentiment:-2, keywords: ["malo", "pesimo"], text: "El servicio es pesimo y muy malo"})
