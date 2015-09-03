@@ -4,7 +4,7 @@ Expression is a **WebApp** for **Sentiment Analysis**. A social platform where p
 
 Expression is developed using **meteorjs** and MongoDB with a [**reactive design**](http://www.reactivemanifesto.org/) in mind.
 
-## Tutorial
+## Use
 
 To run the application:
 
@@ -16,7 +16,17 @@ git clone http://github.com/innova4d/expression-meteor
 cd expression-meteor
 meteor
 ```
-- [Atom](https://atom.io/) is a suggested editor.
+
+## Development
+
+```bash
+git clone http://github.com/innova4d/expression-meteor
+cd expression-meteor
+git checkout development
+atom . #In OSX
+```
+
+- [Atom](https://atom.io/), suggested editor.
 
 # Documentation
 
@@ -29,3 +39,7 @@ The project is structured as follows:
 
 CSS Notes:
 - The distribution of DOM objects in the view relies in the  [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) distribution model.
+
+# Development
+
+Please use the branch "development" for futher implementations

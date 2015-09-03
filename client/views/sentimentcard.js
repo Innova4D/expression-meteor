@@ -119,10 +119,10 @@ Template.sentimentcard.rendered = function () {
       ri.css('background-color', '#30ad63');
       break;
       default: //
-      sf.css('background-color', 'white');
-      sb.css('background-color', 'white');
-      ab.css('background-color', '#ececec');
-      ri.css('background-color', '#ececec');
+      sf.css('background-color', '#4e6bc7');
+      sb.css('background-color', '#4e6bc7');
+      ab.css('background-color', '#3548a1');
+      ri.css('background-color', '#3548a1');
       break;
     }
   }
