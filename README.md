@@ -19,6 +19,8 @@ meteor
 
 ## Development
 
+Please use the branch "development" for futher implementations
+
 ```bash
 git clone http://github.com/innova4d/expression-meteor
 cd expression-meteor
@@ -39,7 +41,3 @@ The project is structured as follows:
 
 CSS Notes:
 - The distribution of DOM objects in the view relies in the  [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) distribution model.
-
-# Development
-
-Please use the branch "development" for futher implementations
