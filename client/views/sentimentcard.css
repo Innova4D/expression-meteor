@@ -1,6 +1,6 @@
 /*
- * Sentimentcard CSS.
- */
+* Sentimentcard CSS.
+*/
 
 .sentiment-card {
   min-width: 350px;
@@ -77,6 +77,7 @@
   /*border-left:  1px solid #d7d7d7;
   border-right: 1px solid #d7d7d7;
   border-bottom:1px solid #d7d7d7;*/
+  border: 1px solid #d7d7d7;
   line-height: 0;
 }
 
@@ -158,9 +159,9 @@ box-shadow: 0px;
   border-radius: 5px 5px 0px 0px;
   font-family: 'Roboto','Helvetica', sans-serif;
   /*box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.55);*/
-  /*border-top:   1px solid #d7d7d7;
+  border-top:   1px solid #d7d7d7;
   border-left:  1px solid #d7d7d7;
-  border-right: 1px solid #d7d7d7;*/
+  border-right: 1px solid #d7d7d7;
 }
 
 /* front pane, placed above back */

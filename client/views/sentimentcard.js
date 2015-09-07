@@ -88,7 +88,7 @@ Template.sentimentcard.rendered = function () {
     var target =  parseInt(self.$(".avg-sentiment").text());
 
     switch (target) {
-      case 0: //verynegative
+      case 0: //Very Negative
       sf.css('background-color', '#d0495a');
       sb.css('background-color', '#d0495a');
       ab.css('background-color', '#ba4251');
@@ -112,17 +112,23 @@ Template.sentimentcard.rendered = function () {
       ab.css('background-color', '#30ad63');
       ri.css('background-color', '#30ad63');
       break;
-      case 4: //verypositive
+      case 4: //Very Positive
       sf.css('background-color', '#39cb74');
       sb.css('background-color', '#39cb74');
       ab.css('background-color', '#30ad63');
       ri.css('background-color', '#30ad63');
       break;
-      default: //
+      default: //No sentiment
+      /*
       sf.css('background-color', '#4e6bc7');
       sb.css('background-color', '#4e6bc7');
       ab.css('background-color', '#3548a1');
       ri.css('background-color', '#3548a1');
+      */
+      sf.css('background-color', 'white');
+      sb.css('background-color', 'white');
+      ab.css('background-color', '#f6f7f8');
+      ri.css('background-color', '#f6f7f8');
       break;
     }
   }
