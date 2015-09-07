@@ -22,6 +22,7 @@ meteor
 ```bash
 git clone http://github.com/innova4d/expression-meteor
 cd expression-meteor
+git checkout dev0.5 #current development version
 atom . #In OSX
 ```
 
