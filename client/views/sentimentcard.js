@@ -86,7 +86,7 @@ Template.sentimentcard.rendered = function () {
     var ri = self.$(".ribbon");
 
     var target =  parseInt(self.$(".avg-sentiment").text());
-
+/*
     switch (target) {
       case 0: //Very Negative
       sf.css('background-color', '#d0495a');
@@ -119,18 +119,23 @@ Template.sentimentcard.rendered = function () {
       ri.css('background-color', '#30ad63');
       break;
       default: //No sentiment
-      /*
+
       sf.css('background-color', '#4e6bc7');
       sb.css('background-color', '#4e6bc7');
       ab.css('background-color', '#3548a1');
       ri.css('background-color', '#3548a1');
-      */
+
       sf.css('background-color', 'white');
       sb.css('background-color', 'white');
       ab.css('background-color', '#f6f7f8');
       ri.css('background-color', '#f6f7f8');
       break;
-    }
+    }*/
+
+    sf.css('background-color', 'white');
+    sb.css('background-color', 'white');
+    ab.css('background-color', '#f6f7f8');
+    ri.css('background-color', '#none');
   }
 
   Tracker.autorun(function () {

@@ -3,19 +3,16 @@
  */
 
 .keyword {
-  color: #ececec;
-  font-size: 10px;
-  font-weight: 300;
+  color: #a9aeb6;
+  font-size: 12px;
+  font-weight: 400;
   font-family: roboto, helvetica;
-  opacity: 0.9;
-  filter: alpha(opacity=90);
-  background: none;
+  background: #f6f7f8;
   border-radius: 5px;
-  border: 1px solid rgba(255,255,255,0.45);
-  padding: 0px 0px 0px 0px;
-  margin: 2px;
+  padding: 0px;
+  margin: 1px;
   text-transform: capitalize;
-  text-shadow: 0px 0px 5px rgba(25,25,25, 0.45);
+  border: 1px solid #a9aeb6;
 }
 
 .keyword-container{
