@@ -1,6 +1,6 @@
 /*
- * Comment-box CSS.
- */
+* Comment-box CSS.
+*/
 
 .comment-box {
   top: 0;
@@ -18,6 +18,9 @@
 }
 
 .comment-box-toolbar-top {
+  display:  -webkit-box;
+  display:  -webkit-flex;
+  display:  -ms-flexbox;
   display:  flex;
   padding: 15px;
 }
@@ -87,10 +90,24 @@
 }
 
 .comment-box .comment-box-bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+
+  background: -webkit-linear-gradient(rgba(255,255,255,0), #efefef 15%) top center no-repeat;
 
   background: linear-gradient(rgba(255,255,255,0), #efefef 15%) top center no-repeat;
 
