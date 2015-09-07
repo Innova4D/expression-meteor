@@ -19,12 +19,9 @@ meteor
 
 ## Development
 
-Please use the branch "development" for futher implementations
-
 ```bash
 git clone http://github.com/innova4d/expression-meteor
 cd expression-meteor
-git checkout development
 atom . #In OSX
 ```
 
