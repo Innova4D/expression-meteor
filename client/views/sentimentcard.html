@@ -6,19 +6,20 @@
       <div class="sentiment-card-front">
         <!-- front content -->
         <div class="sentiment-card-data-source">{{dataSource}}</div>
-        {{>sentimentmap}}
+        {{>sentimentbars}}
         {{>commentsribbon}}
+        {{>keywordsribbon}}
         <div class="card-title card-title-front stopselect">{{name}}
-          <div class="glyphicon glyphicon-transfer"></div>
+          <!-- <div class="fa fa-map-marker"></div> -->
         </div>
       </div>
+
       <div class="sentiment-card-back">
         <!-- back content -->
         <div class="sentiment-card-data-source">{{dataSource}}</div>
-        {{>sentimentbars}}
-        {{>keywordsribbon}}
+        {{>sentimentmap}}
         <div class="card-title card-title-back stopselect">{{name}}
-          <div class="glyphicon glyphicon-transfer"></div>
+          <!-- <div class="fa fa-map-marker"></div> -->
         </div>
       </div>
     </div>

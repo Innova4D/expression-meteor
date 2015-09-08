@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  background: #f6f6f6;
+  background: #e9eaed;
 }
 
 /*** Important ***/
@@ -12,7 +12,7 @@ core-scaffold .core-header-panel {
 }
 
 core-scaffold .core-header-panel #section {
-  background: #f6f6f6 !important;
+  background: #e9eaed !important;
 }
 
 core-scaffold #scrim {
@@ -22,8 +22,8 @@ core-scaffold #scrim {
 core-scaffold::shadow core-toolbar { background: white; }
 core-scaffold core-toolbar { background: white; }
 
-core-scaffold::shadow core-header-panel {  background: #f6f6f6; }
-core-scaffold core-header-panel {  background: #f6f6f6; }
+core-scaffold::shadow core-header-panel {  background: #e9eaed; }
+core-scaffold core-header-panel {  background: #e9eaed; }
 
 core-scaffold core-toolbar #bottomBar{
   width: 100%;
@@ -33,7 +33,7 @@ core-scaffold core-toolbar #bottomBar{
 }
 
 core-scaffold::shadow #mainContainer {
-  background: #f6f6f6;
+  background: #e9eaed; /*f6f6f6*/
   height: 100%;
 }
 
@@ -66,7 +66,7 @@ core-scaffold .sentiment-cards-section {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: #f6f6f6;
+  background: #e9eaed;
 }
 
 ::content > * {
