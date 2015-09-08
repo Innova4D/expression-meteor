@@ -4,15 +4,15 @@
 
 .keyword {
   color: #a9aeb6;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   font-family: roboto, helvetica;
   background: #f6f7f8;
   border-radius: 5px;
   padding: 0px;
-  margin: 1px;
+  margin: 2px;
   text-transform: capitalize;
-  border: 1px solid #a9aeb6;
+  border: 1px solid #ececec;
 }
 
 .keyword-container{
