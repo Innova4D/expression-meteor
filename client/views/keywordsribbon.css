@@ -28,6 +28,7 @@
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  border-bottom: 0px solid #ececec;
 }
 
 .keyword-icon {
