@@ -12,7 +12,7 @@ Template.sentimentbars.events({
     template.$(".negative").animate({right: '10px'});
     template.$(".verynegative").animate({right: '20px'});
     template.$(".sentimentbar").css('box-shadow', '0px 2px 5px 0px rgba(0, 0, 0, 0.45)');
-    template.$(".emoticon").removeClass("hidden");
+    // template.$(".emoticon").removeClass("hidden");
     template.$(".bar-value").removeClass("hidden");
     template.$(".dismiss-bars").removeClass("hidden");
     template.$(".dismiss-bars").addClass("animated zoomIn");
@@ -23,7 +23,7 @@ Template.sentimentbars.events({
     template.$(".negative").animate({right: '0px'});
     template.$(".verynegative").animate({right: '0px'});
     template.$(".sentimentbar").css('box-shadow', '');
-    template.$(".emoticon").addClass("hidden");
+    // template.$(".emoticon").addClass("hidden");
     template.$(".bar-value").addClass("hidden");
     template.$(".dismiss-bars").addClass("hidden");
   }
