@@ -1,6 +1,6 @@
 /*
- * Single Comment box CSS.
- */
+* Single Comment box CSS.
+*/
 
 .singlecommentbox {
   /** Max characters -> 280 **/
@@ -14,8 +14,8 @@
   margin-left:  3%;
   margin-right: 3%;
   -webkit-flex-flow: row;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  -ms-flex-flow: row;
+  flex-flow: row;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -23,16 +23,16 @@
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .user-photo {
@@ -91,8 +91,8 @@
   display: flex;
   -webkit-box-align: baseline;
   -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .comment-box-source {
@@ -106,8 +106,8 @@
 .comment-box-meta {
   -webkit-box-flex: 2;
   -webkit-flex-grow: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
 }
 
 .user-sentiment {
@@ -117,6 +117,6 @@
   display: flex;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
 }
