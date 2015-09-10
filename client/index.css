@@ -7,7 +7,8 @@ html, body {
 /* Using Shadow to chrome, non-using for safari (weird shim-shadowdom bug with meteor) **/
 
 core-scaffold .core-header-panel {
-  background: #fb9737;
+  background: white; /*#fb9737;*/
+  color: #424242;
   height: 100%;
 }
 
@@ -33,14 +34,15 @@ core-scaffold core-toolbar #bottomBar{
 }
 
 core-scaffold::shadow #mainContainer {
-  background: #e9eaed; /*f6f6f6*/
+  background:  black; /*f6f6f6#e9eaed*/
+  color: #424242;
   height: 100%;
 }
 
 core-scaffold .core-toolbar{
   position: absolute;
   width: 100%;
-  background: #80e3ea;
+  background: black; /*#80e3ea*/
 }
 
 core-scaffold .search-header { color: #424242; }
@@ -318,17 +320,13 @@ core-scaffold paper-tabs::shadow #selectionBar { background-color: #fd9826;  hei
 
 .expression-description {
   padding: 10px;
-  color: #ffffff;
+  color: #424242;
   font-size: 12px;
   font-family: Roboto,Helvetica, sans-serif;
   font-weight: 300;
-
   display: -webkit-box;
-
   display: -webkit-flex;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
