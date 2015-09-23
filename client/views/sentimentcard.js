@@ -17,11 +17,11 @@ Template.sentimentcard.events({
   'click .share-card': function (event,template) {
     var avg = parseInt(template.$('.avg-sentiment').text());
     switch (avg) {
-      case 0: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
-      case 1: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
-      case 2: template.$('.action-bar').css("background-color", "#dcaa45"); break;
-      case 3: template.$('.action-bar').css("background-color", "#41ca77"); break;
-      case 4: template.$('.action-bar').css("background-color", "#41ca77"); break;
+      // case 0: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
+      // case 1: template.$('.action-bar').css("background-color", "#ce4a5c"); break;
+      // case 2: template.$('.action-bar').css("background-color", "#dcaa45"); break;
+      // case 3: template.$('.action-bar').css("background-color", "#41ca77"); break;
+      // case 4: template.$('.action-bar').css("background-color", "#41ca77"); break;
     }
     template.$('.share-card-fa').removeClass("fa-share-alt").addClass("fa-times");
     template.$('.share-card').removeClass("share-card").addClass("dismiss-share-card");
@@ -31,11 +31,11 @@ Template.sentimentcard.events({
     template.$('.action-bar-share-card').removeClass("animated fadeIn").addClass("animated fadeOut");
     var avg = parseInt(template.$('.avg-sentiment').text());
     switch (avg) {
-      case 0: template.$('.action-bar').css("background-color", "#b84353"); break;
-      case 1: template.$('.action-bar').css("background-color", "#b84353"); break;
-      case 2: template.$('.action-bar').css("background-color", "#dcaa45"); break;
-      case 3: template.$('.action-bar').css("background-color", "#30ad63"); break;
-      case 4: template.$('.action-bar').css("background-color", "#30ad63"); break;
+      // case 0: template.$('.action-bar').css("background-color", "#b84353"); break;
+      // case 1: template.$('.action-bar').css("background-color", "#b84353"); break;
+      // case 2: template.$('.action-bar').css("background-color", "#dcaa45"); break;
+      // case 3: template.$('.action-bar').css("background-color", "#30ad63"); break;
+      // case 4: template.$('.action-bar').css("background-color", "#30ad63"); break;
     }
     template.$('.share-card-fa').removeClass("fa-times").addClass("fa-share-alt");
     template.$('.action-bar-share-card').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
