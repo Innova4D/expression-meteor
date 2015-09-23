@@ -21,24 +21,25 @@ Template.sharecard.rendered = function () {
     function animateCardBackground(bar) {
       var actioncard = self.$(".action-bar-share-card");
       var target =  parseInt(self.data.avgsentiment);
+      actioncard.css('background-color', 'white');
       // switch (this.data.sentiment) {
-      switch (target) {
-        case 0: //verynegative
-        actioncard.css('background-color', '#b84353');
-        break;
-        case 1: //Negative
-        actioncard.css('background-color', '#b84353');
-        break;
-        case 2: //Neutral
-        actioncard.css('background-color', '#f5be4d');
-        break;
-        case 3: //Positive
-        actioncard.css('background-color', '#37ac65');
-        break;
-        case 4: //verypositive
-        actioncard.css('background-color', '#37ac65');
-        break;
-      }
+      // switch (target) {
+      //   case 0: //verynegative
+      //   actioncard.css('background-color', '#b84353');
+      //   break;
+      //   case 1: //Negative
+      //   actioncard.css('background-color', '#b84353');
+      //   break;
+      //   case 2: //Neutral
+      //   actioncard.css('background-color', '#f5be4d');
+      //   break;
+      //   case 3: //Positive
+      //   actioncard.css('background-color', '#37ac65');
+      //   break;
+      //   case 4: //verypositive
+      //   actioncard.css('background-color', '#37ac65');
+      //   break;
+      // }
     }
 
     Tracker.autorun(function () {
